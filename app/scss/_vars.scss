@@ -1,0 +1,17 @@
+$orange-900-clr: #ff6838;
+$silver-200-clr: #ececec;
+$silver-100-clr: #f9faff;
+$gray-clr: #c2c2c2;
+$darkBlue-900-clr: #363853;
+$dark-clr: #31352b;
+
+%flex-spaceBetween {
+   display: flex;
+   justify-content: space-between;
+}
+
+%image-prop {
+   background-size: cover;
+   background-position: center center;
+   background-repeat: no-repeat;
+}

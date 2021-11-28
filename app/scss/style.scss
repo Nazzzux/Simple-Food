@@ -1,8 +1,58 @@
-@import 'vars';
-@import 'fonts';
 @import 'reset';
+@import 'fonts';
+@import 'vars';
 @import 'global';
 
+.header {
+}
+
+.menu {
+   @extend %flex-spaceBetween;
+   align-items: center;
+   padding: 60px 0;
+	&__logo-link {
+      &-img {
+      }
+	}
+	&__list {
+      @extend %flex-spaceBetween;
+      margin-left: auto;
+      margin: 0 63px 0 auto;
+	}
+	&__item {
+      &:not(:last-child) {
+         margin-right: 45px;
+      }
+	}
+	&__link {
+      outline: transparent;
+	}
+	&__nav {
+      display: flex;
+      &-item {
+      }
+      &-link {
+         
+         display: block;
+         width: 44px;
+         height: 44px;
+         position: relative;
+      }
+      &-img {
+         transform: translate(50%, 60%);
+      }
+      &-num {
+         position: absolute;
+         top: 0;
+         right: 0;
+         width: 14px;
+         height: 14px;
+         border-radius: 50%;
+         background-color: $orange-900-clr;
+         text-align: center;
+      }
+	}
+}
 
 
 
