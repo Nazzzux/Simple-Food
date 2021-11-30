@@ -66,7 +66,7 @@
             }
             &:focus,
             .header__link-more:focus {
-                  outline: 2px solid $orange-900-clr;
+                  @extend %outline;
                   border-radius: 6px;
             }
             &:active,
@@ -105,7 +105,7 @@
                         }
                   }
                   &:focus {
-                        outline: 2px solid $orange-900-clr;
+                        @extend %outline;
                         background-color: $orange-light-clr;
                         & .menu__nav-img {
                               stroke: $darkBlue-900-clr;
@@ -145,7 +145,7 @@
                   opacity: 0.8;
             }
             &:focus {
-                  outline: 2px solid $orange-900-clr;
+                  @extend %outline;
                   border-radius: 6px;
             }
             &:active {
@@ -176,8 +176,36 @@
             box-shadow: 0px 0px 0px 1px $silver-200-clr;
             background-color: $white;
             color: $darkBlue-900-clr;
+            outline: transparent;
+            transition: all 0.3s;
             &-svg {
                   margin-right: 10px;
+                  fill: $darkBlue-900-clr;
+            }
+            &:hover {
+                  @extend %outline;
+                  background-color: $orange-light-clr;
+                  color: $orange-900-clr;
+                  & .catalog__button-svg {
+                        fill: $orange-900-clr;
+                  }
+            }
+            &:focus {
+                  @extend %outline;
+            }
+            &:active{
+                  outline: transparent;
+                  background-color: $white;
+                  box-shadow: inset 0px -5px 12px rgba($orange-900-clr, 0.2);
+                  color: $darkBlue-900-clr;
+            }
+            &.mixitup-control-active {
+                  background-color: $orange-900-clr;
+                  color: $white;
+                  outline: transparent;
+                  & .catalog__button-svg {
+                        fill: $white;
+                  }
             }
       }
       &__wrp {
@@ -198,7 +226,7 @@
                   text-decoration: none;
             }
             &:focus {
-                  outline: 2px solid $orange-900-clr;
+                  @extend %outline;
                   text-decoration: underline;
             }
             &:active {
@@ -208,7 +236,6 @@
             }
       }
 }
-
 
 .article {
       display: flex;
@@ -276,7 +303,7 @@
                   color: $darkBlue-900-clr;
             }
             &:focus {
-                  outline: 2px solid $orange-900-clr;
+                  @extend %outline;
             }
       }
       &__subscribe-btn {
@@ -309,7 +336,7 @@
                   color: $orange-900-clr;
             }
             &:focus {
-                  outline: 2px solid $orange-900-clr;
+                  @extend %outline;
             }
       }
       &__bottom {
@@ -346,7 +373,7 @@
                   @extend %image-prop;
             }
             &:focus {
-                  outline: 2px solid $orange-900-clr;
+                  @extend %outline;
             }
             &--location::before {
                   background-image: url('../images/navigation/location.svg');
@@ -383,7 +410,7 @@
                         }
                   }
                   &:focus {
-                        outline: 2px solid $orange-900-clr;
+                        @extend %outline;
                         background-color: $orange-light-clr;
                   }
                   &:active {

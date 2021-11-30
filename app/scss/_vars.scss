@@ -1,5 +1,5 @@
 $orange-900-clr: #ff6838;
-$orange-light-clr: #fff2ed;
+$orange-light-clr: rgba(#ff7a50, 0.1);
 $silver-200-clr: #ececec;
 $silver-100-clr: #f9faff;
 $gray-clr: #c2c2c2;
@@ -38,5 +38,9 @@ $white: #fff;
    background-size: cover;
    background-position: center center;
    background-repeat: no-repeat;
+}
+
+%outline {
+   outline: 2px solid $orange-900-clr;
 }
 
