@@ -77,64 +77,64 @@
       }
       &__nav {
             display: flex;
-            &-item:not(:last-child) {
-                  margin-right: 10px;
+      }
+      &__nav-item:not(:last-child) {
+            margin-right: 10px;
+      }
+      &__nav-link {
+            display: block;
+            width: 44px;
+            height: 44px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: transparent;
+            transition: all 0.3s;
+            border-radius: 6px;
+            & .menu__nav-img {
+                  stroke: $darkBlue-900-clr;
+            } 
+            &:hover {
+                  background-color: $orange-900-clr;
+                  & .menu__nav-img {
+                        stroke: $white;
+                  }
+                  & .menu__nav-num {
+                        background-color: $white;
+                        color: $orange-900-clr;
+                  }
             }
-            &-link {
-                  display: block;
-                  width: 44px;
-                  height: 44px;
-                  position: relative;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  outline: transparent;
-                  transition: all 0.3s;
-                  border-radius: 6px;
+            &:focus {
+                  @extend %outline;
+                  background-color: $orange-light-clr;
                   & .menu__nav-img {
                         stroke: $darkBlue-900-clr;
-                  } 
-                  &:hover {
+                  }
+            }
+            &:active {
+                  outline: transparent;
+                  background-color: $orange-light-clr;
+                  & .menu__nav-img {
+                        stroke: $darkBlue-900-clr;
+                  }
+                  & .menu__nav-num {
                         background-color: $orange-900-clr;
-                        & .menu__nav-img {
-                              stroke: $white;
-                        }
-                        & .menu__nav-num {
-                              background-color: $white;
-                              color: $orange-900-clr;
-                        }
-                  }
-                  &:focus {
-                        @extend %outline;
-                        background-color: $orange-light-clr;
-                        & .menu__nav-img {
-                              stroke: $darkBlue-900-clr;
-                        }
-                  }
-                  &:active {
-                        outline: transparent;
-                        background-color: $orange-light-clr;
-                        & .menu__nav-img {
-                              stroke: $darkBlue-900-clr;
-                        }
-                        & .menu__nav-num {
-                              background-color: $orange-900-clr;
-                              color: $white;
-                        }
+                        color: $white;
                   }
             }
-            &-num {
-                  position: absolute;
-                  top: 7px;
-                  right: 5px;
-                  width: 14px;
-                  height: 14px;
-                  border-radius: 50%;
-                  background-color: $orange-900-clr;
-                  text-align: center;
-                  @include font-prop (10px, 1.4);
-                  color: $white;
-            }
+      }
+      &__nav-num {
+            position: absolute;
+            top: 7px;
+            right: 5px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: $orange-900-clr;
+            text-align: center;
+            @include font-prop (10px, 1.4);
+            color: $white;
       }
 }
 
@@ -178,10 +178,6 @@
             color: $darkBlue-900-clr;
             outline: transparent;
             transition: all 0.3s;
-            &-svg {
-                  margin-right: 10px;
-                  fill: $darkBlue-900-clr;
-            }
             &:hover {
                   @extend %outline;
                   background-color: $orange-light-clr;
@@ -206,6 +202,10 @@
                         fill: $white;
                   }
             }
+      }
+      &__button-svg {
+            margin-right: 10px;
+            fill: $darkBlue-900-clr;
       }
       &__wrp {
             display: grid;
@@ -344,8 +344,6 @@
             padding: 30px 0;
             @include font-prop(14px, 1);
       }
-      &__bottom-text {
-      }
 }
 
 .adress {
@@ -384,45 +382,43 @@
                   background-image: url('../images/navigation/envelope.svg');
             }
       }
-      &__social {
-            &-list {
-                  display: flex;
+      &__social-list {
+            display: flex;
+      }
+      &__social-item:not(:last-child) {
+            margin-right: 13px;
+      }
+      &__social-link {
+            display: block;
+            width: 39px;
+            height: 39px;
+            border-radius: 50%;
+            background-color: $silver-200-clr;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: transparent;
+            transition: all 0.3s;
+            &:hover {
+                  background-color: $orange-900-clr;
+                  .adress__social-svg {
+                        fill: $white;
+                  }
             }
-            &-item:not(:last-child) {
-                  margin-right: 13px;
+            &:focus {
+                  @extend %outline;
+                  background-color: $orange-light-clr;
             }
-            &-link {
-                  display: block;
-                  width: 39px;
-                  height: 39px;
-                  border-radius: 50%;
-                  background-color: $silver-200-clr;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
+            &:active {
                   outline: transparent;
-                  transition: all 0.3s;
-                  &:hover {
-                        background-color: $orange-900-clr;
-                        .adress__social-svg {
-                              fill: $white;
-                        }
-                  }
-                  &:focus {
-                        @extend %outline;
-                        background-color: $orange-light-clr;
-                  }
-                  &:active {
-                        outline: transparent;
-                        background-color: $orange-light-clr;
-                        .adress__social-svg {
-                              fill: $orange-900-clr;
-                        }
+                  background-color: $orange-light-clr;
+                  .adress__social-svg {
+                        fill: $orange-900-clr;
                   }
             }
-            &-svg {
-                  fill: $dark-clr;
-            }
+      }
+      &__social-svg {
+            fill: $dark-clr;
       }
 }
 
