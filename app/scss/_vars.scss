@@ -12,27 +12,6 @@ $white: #fff;
    line-height: $lh;
 }
 
-%rubik-300 {
-   font-family: 'Rubik-Light', sans-serif;
-   font-weight: 300;
-}
-%rubik-400 {
-   font-family: 'Rubik-Regular', sans-serif;
-   font-weight: 400;
-}
-%rubik-600 {
-   font-family: 'Rubik-Medium', sans-serif;
-   font-weight: 600;
-}
-%rubik-700 {
-   font-family: 'Rubik-Bold', sans-serif;
-   font-weight: 700;
-}
-
-%flex-spaceBetween {
-   display: flex;
-   justify-content: space-between;
-}
 
 %image-prop {
    background-size: cover;

@@ -6,14 +6,14 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="icon" href="images/favicon/favicon.jpg" type="images/x-icon">
    <link rel="stylesheet" href="css/style.min.css">
-   <title>Simple Food</title> 
+   <title>Сервис доствки еды Simple Food | Главная</title> 
 </head>
 <body>
    <header class="header">
       <div class="container">
          <nav class="menu">
-            <a class="logo__link" href="#">
-               <img class="logo__img" src="images/navigation/logo.svg" alt="Логотип" style="width: 200; height: 39;">
+            <a class="logo" href="#">
+               <img class="logo__img" src="images/navigation/logo.svg" alt="Логотип" width="200" height="39">
             </a>
             <ul class="menu__list">
                <li class="menu__item">
@@ -32,26 +32,30 @@
                   </a>
                </li>
             </ul>
-            <ul class="menu__nav">
-               <li class="menu__nav-item">
-                  <a class="menu__nav-link" href="#">
+            <ul class="user-nav">
+               <li class="user-nav__item">
+                  <button class="user-nav__link" href="#">
                      <span class="sr-only">Кнопка поиска</span>
-                     <svg class="menu__nav-img" style="width: 19; height: 19;">
+                     <svg class="user-nav__img" width="19" height="19">
                         <use xlink:href="#search"></use>
                      </svg>
-                  </a>
+                  </button>
                </li>
-               <li class="menu__nav-item">
-                  <a class="menu__nav-link" href="#">
+               <li class="user-nav__item">
+                  <a class="user-nav__link" href="#">
                      <span class="sr-only">Кнопка корзины</span>
-                     <svg class="menu__nav-img" style="width: 19; height: 19;">
+                     <svg class="user-nav__img" width="19" height="19">
                         <use xlink:href="#cart"></use>
                      </svg>
-                     <span class="menu__nav-num">4</span>
+                     <span class="user-nav__num">4</span>
                   </a>
                </li>
             </ul>
          </nav>
+      </div>
+   </header>
+   <main>
+      <div class="container">
          <div class="header__content" style="background-image: url('images/bg-images/header-bg.png'); height: 660px;">
             <h1 class="header__title">
                доставка
@@ -64,7 +68,7 @@
             </p>
             <ul class="header__list">
                <li class="header__item">
-                  <a class="header__link global-link" href="#">Заказать</a>
+                  <a class="header__link button" href="#">Заказать</a>
                </li>
                <li class="header__item">
                   <a class="header__link-more" href="#">Подробнее</a>
@@ -72,15 +76,13 @@
             </ul>
          </div>
       </div>
-   </header>
-   <main>
       <section class="catalog section">
          <div class="container">
             <h2 class="catalog__title title">Популярные категории</h2>
             <ul class="catalog__list">
                <li class="catalog__item">
                   <button class="catalog__button" type="button" data-filter="all">
-                     <svg class="catalog__button-svg" style="width: 44px; height: 44px;">
+                     <svg class="catalog__button-svg" width="44" height="44">
                         <use xlink:href="#burger"></use>
                      </svg>
                      Бургеры
@@ -88,7 +90,7 @@
                </li>
                <li class="catalog__item">
                   <button class="catalog__button" type="button" data-filter=".category-a">
-                     <svg class="catalog__button-svg" style="width: 44px; height: 44px;">
+                     <svg class="catalog__button-svg" width="44" height="44">
                         <use xlink:href="#pizza"></use>
                      </svg>
                      Пицца
@@ -96,7 +98,7 @@
                </li>
                <li class="catalog__item">
                   <button class="catalog__button" type="button" data-filter=".category-b">
-                     <svg class="catalog__button-svg" style="width: 44px; height: 44px;">
+                     <svg class="catalog__button-svg" width="44" height="44">
                         <use xlink:href="#sandwich"></use>
                      </svg>
                      Сендвичи
@@ -104,7 +106,7 @@
                </li>
                <li class="catalog__item">
                   <button class="catalog__button" type="button" data-filter=".category-c">
-                     <svg class="catalog__button-svg" style="width: 44px; height: 44px;">
+                     <svg class="catalog__button-svg" width="44" height="44">
                         <use xlink:href="#asian"></use>
                      </svg>
                      Азиатская кухня
@@ -112,7 +114,7 @@
                </li>
                <li class="catalog__item">
                   <button class="catalog__button" type="button" data-filter=".category-d">
-                     <svg class="catalog__button-svg" style="width: 44px; height: 44px;">
+                     <svg class="catalog__button-svg" width="44" height="44">
                         <use xlink:href="#dish"></use>
                      </svg>
                      Cеты
@@ -122,106 +124,106 @@
             <ul class="catalog__wrp" id="catalog__wrpz">
                <li class="catalog__wrp-item mix category-a">
                   <article class="article">
-                     <img class="article__img" src="images/catalog/burger-1.png" alt="Чизбургер с листьями салата" style="width: 140px; height: 140px;">
+                     <img class="article__img" src="images/catalog/burger-1.png" alt="Чизбургер с листьями салата" width="140" height="140">
                      <p class="article__title">
                         Чизбургер с листьями салата
                         <span class="article__price">160 руб.</span>
                      </p>
-                     <button class="article__button global-link" type="button">В корзину</button>
+                     <button class="article__button button" type="button">В корзину</button>
                   </article>
                </li>
                <li class="catalog__wrp-item mix category-b">
                   <article class="article">
-                     <img class="article__img" src="images/catalog/burger-2.png" alt="Бифбургер" style="width: 140px; height: 140px;">
+                     <img class="article__img" src="images/catalog/burger-2.png" alt="Бифбургер" width="140" height="140 ">
                      <p class="article__title">
                         Бифбургер
                         <span class="article__price">190 руб.</span>
                      </p>
-                     <button class="article__button global-link" type="button">В корзину</button>
+                     <button class="article__button button" type="button">В корзину</button>
                   </article>
                </li>
                <li class="catalog__wrp-item mix category-c">
                   <article class="article">
-                     <img class="article__img" src="images/catalog/burger-3.png" alt="Королевский чизбургер" style="width: 140px; height: 140px;">
+                     <img class="article__img" src="images/catalog/burger-3.png" alt="Королевский чизбургер" width="140" height="140 ">
                      <p class="article__title">
                         Королевский чизбургер
                         <span class="article__price">260 руб.</span>
                      </p>
-                     <button class="article__button global-link" type="button">В корзину</button>
+                     <button class="article__button button" type="button">В корзину</button>
                   </article>
                </li>
                <li class="catalog__wrp-item mix category-d">
                   <article class="article">
-                     <img class="article__img" src="images/catalog/burger-4.png" alt="Черный гамбургер" style="width: 140px; height: 140px;">
+                     <img class="article__img" src="images/catalog/burger-4.png" alt="Черный гамбургер" width="140" height="140">
                      <p class="article__title">
                         Черный гамбургер
                         <span class="article__price">199 руб.</span>
                      </p>
-                     <button class="article__button global-link" type="button">В корзину</button>
+                     <button class="article__button button" type="button">В корзину</button>
                   </article>
                </li>
                <li class="catalog__wrp-item mix category-a">
                   <article class="article">
-                     <img class="article__img" src="images/catalog/burger-5.png" alt="Чикен бургер" style="width: 140px; height: 140px;">
+                     <img class="article__img" src="images/catalog/burger-5.png" alt="Чикен бургер" width="140" height="140 ">
                      <p class="article__title">
                         Чикен бургер
                         <span class="article__price">
                            180 руб.
                         </span>
                      </p>
-                     <button class="article__button global-link" type="button">В корзину</button>
+                     <button class="article__button button" type="button">В корзину</button>
                   </article>
                </li>
                <li class="catalog__wrp-item mix category-b">
                   <article class="article">
-                     <img class="article__img" src="images/catalog/burger-1.png" alt="Чизбургер с листьями салата" style="width: 140px; height: 140px;">
+                     <img class="article__img" src="images/catalog/burger-1.png" alt="Чизбургер с листьями салата" width="140" height="140 ">
                      <p class="article__title">
                         Чизбургер с листьями салата
                         <span class="article__price">160 руб.</span>
                      </p>
-                     <button class="article__button global-link" type="button">В корзину</button>
+                     <button class="article__button button" type="button">В корзину</button>
                   </article>
                </li>
                <li class="catalog__wrp-item mix category-c">
                   <article class="article">
-                     <img class="article__img" src="images/catalog/burger-2.png" alt="Бифбургер" style="width: 140px; height: 140px;">
+                     <img class="article__img" src="images/catalog/burger-2.png" alt="Бифбургер" width="140" height="140 ">
                      <p class="article__title">
                         Бифбургер
                         <span class="article__price">190 руб.</span>
                      </p>
-                     <button class="article__button global-link" type="button">В корзину</button>
+                     <button class="article__button button" type="button">В корзину</button>
                   </article>
                </li>
                <li class="catalog__wrp-item mix category-d">
                   <article class="article">
-                     <img class="article__img" src="images/catalog/burger-3.png" alt="Королевский чизбургер" style="width: 140px; height: 140px;">
+                     <img class="article__img" src="images/catalog/burger-3.png" alt="Королевский чизбургер" width="140" height="140 ">
                      <p class="article__title">
                         Королевский чизбургер
                         <span class="article__price">260 руб.</span>
                      </p>
-                     <button class="article__button global-link" type="button">В корзину</button>
+                     <button class="article__button button" type="button">В корзину</button>
                   </article>
                </li>
                <li class="catalog__wrp-item mix category-a">
                   <article class="article">
-                     <img class="article__img" src="images/catalog/burger-4.png" alt="Черный гамбургер" style="width: 140px; height: 140px;">
+                     <img class="article__img" src="images/catalog/burger-4.png" alt="Черный гамбургер" width="140" height="140">
                      <p class="article__title">
                         Черный гамбургер
                         <span class="article__price">199 руб.</span>
                      </p>
-                     <button class="article__button global-link" type="button">В корзину</button>
+                     <button class="article__button button" type="button">В корзину</button>
                   </article>
                </li>
                <li class="catalog__wrp-item mix category-c">
                   <article class="article">
-                     <img class="article__img" src="images/catalog/burger-5.png" alt="Чикен бургер" style="width: 140px; height: 140px;">
+                     <img class="article__img" src="images/catalog/burger-5.png" alt="Чикен бургер" width="140" height="140 ">
                      <p class="article__title">
                         Чикен бургер
                         <span class="article__price">
                            180 руб.
                         </span>
                      </p>
-                     <button class="article__button global-link" type="button">В корзину</button>
+                     <button class="article__button button" type="button">В корзину</button>
                   </article>
                </li>
             </ul>
@@ -233,12 +235,12 @@
       <div class="container">
          <div class="footer__top">
             <div class="footer__subscribe">
-               <a class="logo__link footer__logo" href="#">
-                  <img class="logo__img" src="images/navigation/logo.svg" alt="Логотип" style="width: 200; height: 39;">
+               <a class="logo footer__logo" href="#">
+                  <img class="logo__img" src="images/navigation/logo.svg" alt="Логотип" width="200" height="39">
                </a>
                <label class="footer__label">
                   <input class="footer__input" name="email" type="email" placeholder="Ваш email">
-                  <button class="footer__subscribe-btn global-link" type="submit">
+                  <button class="footer__subscribe-btn button" type="submit">
                      <svg class="footer__subscribe-img" style="width: 17; height: 16;">
                         <use xlink:href="#telegram"></use>
                      </svg>

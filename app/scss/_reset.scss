@@ -71,3 +71,8 @@ address {
 button {
    cursor: pointer;
 }
+
+a[class],
+button[class] {
+   outline: transparent;
+}
