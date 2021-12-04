@@ -1,4 +1,4 @@
 $(function(){
 
-   var mixer = mixitup('.catalog__wrp');
+   var mixer = mixitup('.catalog__list');
 });
