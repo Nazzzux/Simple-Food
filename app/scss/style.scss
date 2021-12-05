@@ -238,6 +238,7 @@
       &__title {
             @include font-prop (15px, 1.2);
             margin-bottom: 10px;
+            font-weight: 400;
             display: -webkit-inline-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
@@ -258,6 +259,109 @@
             @include font-prop(14px, 1.3);
       }
 }
+
+.offer {
+      &__inner {
+            display: flex;
+            align-items: center;
+            min-height: 585px;
+            max-width: 86%;
+            background-position: left top;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin: 0 auto;
+            
+      }
+      &__content {
+            margin-left: auto;
+            max-width: 45%;
+      }
+      &__title {
+            margin-bottom: 30px;
+      }
+      &__accent {
+            display: block;
+      }
+      &__text {
+            margin-bottom: 30px;
+      }
+      &__list {
+            margin-bottom: 42px;
+      }
+      &__item {
+            padding-left: 65px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: left center;
+            &:not(:last-child) {
+                  margin-bottom: 20px;
+            }
+      }
+      &__button {
+            
+      }
+}
+
+
+.restaurant {
+      &__title {
+            text-align: center;
+            margin-bottom: 45px;
+      }
+      &__list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 30px;
+      }
+      &__item {
+
+      }
+}
+
+.restaurantCard {
+      border-radius: 10px;
+      box-shadow: 0px 3px 3px rgba($black, 0.1);
+      &:hover {
+            box-shadow: 0px 3px 15px rgba($orange-600, 0.5);
+      }
+      &__img {
+      }
+      &__title {
+            margin: 15px 0 20px 20px;
+            @include font-prop(24px, 1.3);
+      }
+      &__content {
+            padding: 0 20px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+      }
+      &__time {
+            padding-left: 35px;
+            align-self: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: left center;
+            @include font-prop(18px, 1.5);
+      }
+      &__svg {
+            height: 24px;
+            width: 24px;
+      }
+      &__button {
+            padding: 5px 32px;
+            border-radius: 20px;
+            transition: all 0.2s;
+            &:hover .restaurantCard__svg {
+                        transform: translateX(20%);
+            }
+            
+      }
+      
+}
+
+
 
 .footer {
       &__top {
@@ -347,35 +451,26 @@
             margin-bottom: 15px;
       }
 
+      &__svg {
+            width: 24px;
+            height: 24px;
+            margin-right: 7px;
+      }
+      
       &__link {
-            display: block;
-            padding: 4px 5px 4px 31px;
+            stroke: $dark;
+            display: flex;
+            align-items: center;
+            padding: 4px 4px;
             @include font-prop(16px, 2);
-            position: relative;
-
-            &::before {
-                  content: '';
-                  width: 24px;
-                  height: 24px;
-                  transform: translateY(50%);
-                  bottom: 50%;
-                  left: 0;
-                  position: absolute;
-                  @extend %image-prop;
-            }
-
-            &--location::before {
-                  background-image: url('../images/navigation/location.svg');
-            }
-
-            &--phone::before {
-                  background-image: url('../images/navigation/phone.svg');
-            }
-
-            &--envelope::before {
-                  background-image: url('../images/navigation/envelope.svg');
+            @extend %image-prop;
+            transition: stroke 0.2s;
+            
+            &:hover {
+                  stroke: $orange-900;
             }
       }
+      
 }
 
 .social {
@@ -386,6 +481,7 @@
       }
 
       &__svg {
+            fill: $dark;
       }
       
       &__link {
@@ -397,12 +493,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            fill: $dark;
             transition: all 0.3s;
+            
 
             &:hover {
                   background-color: $orange-900;
-                  fill: $white;
+                  .social__svg {
+                        fill: $white;
+                  }
             }
 
             &:focus {
@@ -412,7 +510,9 @@
 
             &:active {
                   background-color: $orange-600;
-                  fill: $orange-900;
+                  .social__svg {
+                        fill: $orange-900;
+                  }
             }
       }
 }

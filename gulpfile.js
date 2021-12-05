@@ -33,7 +33,7 @@ function styles() {
 function scripts() {
    return src([
       'node_modules/jquery/dist/jquery.js',
-      'node_modules/mixitup/dist/mixitup.js'
+      'node_modules/mixitup/dist/mixitup.js',
       'app/js/main.js'
    ])
    .pipe(concat('main.min.js'))
@@ -59,7 +59,7 @@ function images() {
 }
 
 function svgStore(){
-   return src('app/images/svg/*.svg')
+   return src('app/images/images/*.svg')
    .pipe(svgstore())
    .pipe(dest('./app/images/sprite'))
 }
