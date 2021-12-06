@@ -109,7 +109,7 @@
             margin-bottom: 20px;
             color: $darkBlue-900;
       }
-      
+
       &__accent {
             display: block;
             color: $orange-900;
@@ -245,12 +245,12 @@
             overflow: hidden;
             min-height: 2.4em;
       }
-      
+
       &__price {
             display: block;
             @include font-prop (15px, 1.4);
             font-weight: 600;
-            color: $darkBlue-900;    
+            color: $darkBlue-900;
             margin-bottom: 10px;
       }
 
@@ -270,35 +270,38 @@
             background-size: contain;
             background-repeat: no-repeat;
             margin: 0 auto;
-            
       }
+
       &__content {
             margin-left: auto;
             max-width: 45%;
       }
+
       &__title {
             margin-bottom: 30px;
       }
+
       &__accent {
             display: block;
       }
+
       &__text {
             margin-bottom: 30px;
       }
+
       &__list {
             margin-bottom: 42px;
       }
+
       &__item {
             padding-left: 65px;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: left center;
+
             &:not(:last-child) {
                   margin-bottom: 20px;
             }
-      }
-      &__button {
-            
       }
 }
 
@@ -308,60 +311,246 @@
             text-align: center;
             margin-bottom: 45px;
       }
+
       &__list {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 30px;
-      }
-      &__item {
-
       }
 }
 
 .restaurantCard {
       border-radius: 10px;
       box-shadow: 0px 3px 3px rgba($black, 0.1);
+
       &:hover {
             box-shadow: 0px 3px 15px rgba($orange-600, 0.5);
       }
-      &__img {
-      }
+
       &__title {
             margin: 15px 0 20px 20px;
             @include font-prop(24px, 1.3);
       }
+
       &__content {
             padding: 0 20px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            
       }
+
       &__time {
             padding-left: 35px;
             align-self: center;
             background-repeat: no-repeat;
             background-size: contain;
-            background-position: left center;
+            background-position: left top;
             @include font-prop(18px, 1.5);
       }
+
+      &__button {
+            padding: 4px 32px 5px;
+            border-radius: 20px;
+            transition: all 0.2s;
+
+            &:hover {
+                  padding: 4px 7px 5px 57px;
+            }
+      }
+
       &__svg {
             height: 24px;
             width: 24px;
       }
-      &__button {
-            padding: 5px 32px;
-            border-radius: 20px;
-            transition: all 0.2s;
-            &:hover .restaurantCard__svg {
-                        transform: translateX(20%);
-            }
-            
-      }
-      
 }
 
+.reviews {
+      &__title {
+            text-align: center;
+            margin-bottom: 45px;
+      }
 
+      .slick-dots {
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            left: 562px;
+
+            li:not(:last-child) {
+                  margin-right: 15px;
+            }
+
+            button {
+                  font-size: 0;
+                  display: block;
+                  width: 15px;
+                  height: 15px;
+                  border-radius: 50%;
+                  background-color: $gray;
+            }
+
+            .slick-active button {
+                  background-color: $orange-900;
+            }
+
+            button,
+            .slick-active button {
+                  &:hover {
+                        outline: 2px solid $orange-600;
+                        background-color: $orange-300;
+                  }
+
+                  &:focus {
+                        background-color: initial;
+                        outline: 2px solid $orange-900;
+                  }
+
+                  &:active {
+                        background-color: $orange-600;
+                        outline: transparent;
+                  }
+
+            }
+      }
+
+      &__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 990px;
+            margin: 0 auto 48px;
+      }
+
+      &__img {
+            display: inline;
+            max-width: 300px;
+            border-radius: 50%;
+      }
+
+      &__quote {
+            max-width: 570px;
+            display: block;
+            font-style: italic;
+            position: relative;
+
+            &::before,
+            &::after {
+                  content: '';
+                  width: 24px;
+                  height: 19px;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  position: absolute;
+            }
+
+            &::before {
+                  background-image: url('../images/decor-img/quote-mark-top.svg');
+                  left: -38px;
+                  top: 0;
+            }
+
+            &::after {
+                  background-image: url('../images/decor-img/quote-mark-bottom.svg');
+                  right: -38px;
+                  top: 128px;
+            }
+      }
+
+      .slick-btn {
+            width: 34px;
+            height: 34px;
+            fill: $gray;
+            stroke: $gray;
+            position: absolute;
+            bottom: -9px;
+            border-radius: 50%;
+
+            &:hover {
+                  fill: $orange-300;
+                  stroke: $orange-300;
+            }
+
+            &:focus {
+                  outline: 3px solid $orange-900;
+            }
+
+            &:active {
+                  outline: transparent;
+                  stroke: $orange-900;
+            }
+      }
+
+      .slick-prev {
+            left: 505px;
+      }
+
+      .slick-next {
+            left: 690px;
+      }
+
+      &__author {
+            display: block;
+            margin: 30px 0 15px;
+            font-style: normal;
+            font-weight: 600;
+            color: $orange-900;
+            line-height: 1.3;
+      }
+
+      &__about {
+            font-style: normal;
+            @include font-prop(14px, 1.3);
+      }
+}
+
+.app {
+      &__content {
+            background-position: right center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            min-height: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+      }
+      &__title {
+            max-width: 540px;
+            margin-bottom: 45px;
+      }
+      &__text {
+            max-width: 540px;
+            margin-bottom: 30px;
+      }
+      &__list {
+            display: flex;
+      }
+      &__item:not(:last-child) {
+            margin-right: 30px;
+      }
+      &__link {
+            display: block;
+            width: 135px;
+            height: 40px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 5px;
+            transition: all 0.2s;
+
+            &:hover {
+                  opacity: 0.8;
+            }
+
+            &:focus {
+                  outline: 2px solid $orange-900;
+            }
+
+            &:active {
+                  opacity: 0.5;
+            }
+      }
+}
 
 .footer {
       &__top {
@@ -435,7 +624,7 @@
       &__img {
             margin: 0 15px -3px 0;
       }
-      
+
       &__btn {
             padding: 13px 38px;
             margin-top: 12px;
@@ -456,7 +645,7 @@
             height: 24px;
             margin-right: 7px;
       }
-      
+
       &__link {
             stroke: $dark;
             display: flex;
@@ -465,12 +654,12 @@
             @include font-prop(16px, 2);
             @extend %image-prop;
             transition: stroke 0.2s;
-            
+
             &:hover {
                   stroke: $orange-900;
             }
       }
-      
+
 }
 
 .social {
@@ -483,7 +672,7 @@
       &__svg {
             fill: $dark;
       }
-      
+
       &__link {
             display: block;
             width: 39px;
@@ -494,10 +683,11 @@
             align-items: center;
             justify-content: center;
             transition: all 0.3s;
-            
+
 
             &:hover {
                   background-color: $orange-900;
+
                   .social__svg {
                         fill: $white;
                   }
@@ -510,6 +700,7 @@
 
             &:active {
                   background-color: $orange-600;
+
                   .social__svg {
                         fill: $orange-900;
                   }
