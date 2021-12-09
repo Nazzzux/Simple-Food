@@ -37,6 +37,19 @@
             margin-right: 10px;
       }
 
+      &__num {
+            position: absolute;
+            top: 7px;
+            right: 5px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: $orange-900;
+            text-align: center;
+            @include font-prop (10px, 1.4);
+            color: $white;
+      }
+
       &__link {
             display: block;
             width: 44px;
@@ -74,19 +87,6 @@
                         color: $white;
                   }
             }
-      }
-
-      &__num {
-            position: absolute;
-            top: 7px;
-            right: 5px;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background-color: $orange-900;
-            text-align: center;
-            @include font-prop (10px, 1.4);
-            color: $white;
       }
 }
 
@@ -220,7 +220,7 @@
       }
 }
 
-.foodCard {
+.food-card {
       padding: 20px 15px;
       background-color: $white;
       box-shadow: 0px 0px 0px 1px $silver-200;
@@ -264,6 +264,7 @@
       &__inner {
             display: flex;
             align-items: center;
+            justify-content: flex-end;
             min-height: 585px;
             max-width: 86%;
             background-position: left top;
@@ -273,7 +274,6 @@
       }
 
       &__content {
-            margin-left: auto;
             max-width: 45%;
       }
 
@@ -319,7 +319,7 @@
       }
 }
 
-.restaurantCard {
+.restaurant-card {
       border-radius: 10px;
       box-shadow: 0px 3px 3px rgba($black, 0.1);
 
@@ -413,29 +413,31 @@
             }
       }
 
-      &__item {
+      &__review {
             display: flex;
             justify-content: space-between;
             align-items: center;
             max-width: 990px;
+            width: 100%;
             margin: 0 auto 48px;
       }
 
       &__img {
-            display: inline;
-            max-width: 300px;
             border-radius: 50%;
       }
 
       &__quote {
             max-width: 570px;
+            width: 100%;
             display: block;
             font-style: italic;
             position: relative;
+            quotes: "" "";
+
 
             &::before,
             &::after {
-                  content: '';
+                  // content: '';
                   width: 24px;
                   height: 19px;
                   background-position: center;
@@ -445,13 +447,17 @@
             }
 
             &::before {
-                  background-image: url('../images/decor-img/quote-mark-top.svg');
+                  // background-image: url('../images/decor-img/quote-mark-top.svg');
+                  content: open-quote;
+
                   left: -38px;
                   top: 0;
             }
 
             &::after {
-                  background-image: url('../images/decor-img/quote-mark-bottom.svg');
+                  // background-image: url('../images/decor-img/quote-mark-bottom.svg');
+                  content: open-quote;
+
                   right: -38px;
                   top: 128px;
             }
@@ -491,7 +497,7 @@
 
       &__author {
             display: block;
-            margin: 30px 0 15px;
+            margin-top: 30px;
             font-style: normal;
             font-weight: 600;
             color: $orange-900;
@@ -499,6 +505,10 @@
       }
 
       &__about {
+            display: block;
+            color: $dark;
+            margin-top: 15px;
+            font-weight: normal;
             font-style: normal;
             @include font-prop(14px, 1.3);
       }
