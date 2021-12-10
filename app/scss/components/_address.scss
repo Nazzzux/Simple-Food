@@ -1,0 +1,30 @@
+.address {
+   &__list {
+         margin-bottom: 15px;
+   }
+
+   &__item:not(:nth-child(4n+4)) {
+         margin-bottom: 15px;
+   }
+
+   &__svg {
+         width: 24px;
+         height: 24px;
+         margin-right: 7px;
+   }
+
+   &__link {
+         stroke: $dark;
+         display: flex;
+         align-items: center;
+         padding: 4px 4px;
+         @include font-prop(16px, 2);
+         @extend %image-prop;
+         transition: stroke 0.2s;
+
+         &:hover {
+               stroke: $orange-900;
+         }
+   }
+
+}

@@ -1,0 +1,44 @@
+.hero {
+   &__content {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         background-repeat: no-repeat;
+         background-position: right top;
+         background-size: contain;
+         padding: 158px 0;
+   }
+
+   &__title {
+         @include font-prop (66px, 1.3);
+         max-width: 40%;
+         width: 100%;
+         text-transform: uppercase;
+         font-weight: 600;
+         margin-bottom: 20px;
+         color: $darkBlue-900;
+   }
+
+   &__accent {
+         display: block;
+         color: $orange-900;
+   }
+
+   &__text {
+         max-width: 40%;
+         width: 100%;
+         margin-bottom: 32px;
+   }
+
+   &__list {
+         display: flex;
+   }
+
+   &__item:not(:last-child) {
+         margin-right: 34px;
+   }
+
+   &__link-more {
+         transition: all 0.3s;
+   }
+}
