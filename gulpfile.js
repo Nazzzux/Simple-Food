@@ -3,6 +3,7 @@ const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
+// const nunjacksRender = require('gulp-nunjacks-render');
 const uglify = require('gulp-uglify');
 const del = require('del');
 const svgstore = require('gulp-svgstore');
@@ -17,6 +18,13 @@ function browsersync() {
       notify: false
    })
 }
+
+// function nunjucks() {
+//    return src('app/*.njk')
+//    .pipe(nunjuckRender())
+//    .pipe(dest('app'))
+//    .pipe(browserSync.stream())
+// }
 
 function styles() {
    return src('app/scss/style.scss')
@@ -80,6 +88,7 @@ function cleanDist() {
 
 function watching() {
    watch(['app/scss/**/*.scss'], styles);
+   // watch(['app/*.njk'], nunjucks);
    watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
    watch(['app/**/*.html']).on('change', browserSync.reload);
 }
@@ -89,6 +98,9 @@ exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;
+// exports.nunjucks = nunjucks;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
 exports.default = parallel(styles, scripts,  browsersync, svgStore, watching);
+
+// nunjucks, - parallel b4 styles

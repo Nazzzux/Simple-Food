@@ -1,14 +1,24 @@
 .restaurant-card {
    border-radius: 10px;
    box-shadow: 0px 3px 3px rgba($black, 0.1);
-
+   min-height: 420px;
+   
    &:hover {
          box-shadow: 0px 3px 15px rgba($orange-600, 0.5);
-   }
-
-   &__title {
-         margin: 15px 0 20px 20px;
+      }
+      
+      &__img {
+            margin-bottom: 15px;
+      }
+      
+      &__title {
+         margin: 0 20px 20px 20px;
          @include font-prop(24px, 1.3);
+         display: -webkit-inline-box;
+         -webkit-line-clamp: 2;
+         -webkit-box-orient: vertical;
+         overflow: hidden;
+         min-height: 2.6em;
    }
 
    &__content {
@@ -20,26 +30,19 @@
 
    &__time {
          @include font-prop(18px, 1.5);
+   }
 
-         &-svg {
-               width: 22px;
-               height: 22px;
-               margin-bottom: -3px;
-         }
+   &__time-svg {
+      margin-bottom: -3px;
    }
 
    &__btn {
-         padding: 5px 32px;
-         border-radius: 20px;
-         transition: all 0.2s;
+      padding: 5px 32px;
+      border-radius: 20px;
+      transition: all 0.2s;
 
-         &:hover {
-               padding: 5px 10px 5px 54px;
-         }
-   }
-
-   &__svg {
-         width: 14px;
-         height: 12px;
+      &:hover {
+            padding: 5px 10px 5px 54px;
+      }
    }
 }

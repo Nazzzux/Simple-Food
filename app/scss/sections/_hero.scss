@@ -1,12 +1,12 @@
 .hero {
    &__content {
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         background-repeat: no-repeat;
-         background-position: right top;
-         background-size: contain;
-         padding: 158px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-size: contain;
+      height: calc(100vh - 350px);
    }
 
    &__title {
