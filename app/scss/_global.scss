@@ -4,13 +4,15 @@ body {
    font-weight: 400;
    color: $dark;
    @include font-prop (20px, 1.5);
+   height: 100%;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
 }
 
-main {
+.main {
    flex-grow: 1;
+   // flex: 1 1 auto;
 }
 
 .sr-only {
@@ -102,4 +104,39 @@ main {
       opacity: 0.5;
    }
 
+}
+
+.breadcrumbs {
+   background-color: $orange-600;
+
+   &__list {
+      display: flex;
+      justify-content: start;
+      @include font-prop(14px, 1.2);
+      padding: 24px 0;
+   }
+
+   &__item {
+      position: relative;
+
+      &::after {
+         content: '';
+         background-image: url('../images/icons/arrow-right.svg');
+         width: 5px;
+         height: 10px;
+         top: 2px;
+         right: -10px;
+         position: absolute;
+      }
+
+      &:last-child{
+         &::after {
+            display: none;
+         }
+      }
+
+      &:not(:last-child) {
+         margin-right: 16px;
+      }
+   }
 }

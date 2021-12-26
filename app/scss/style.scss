@@ -4,6 +4,8 @@
 @import 'vars';
 @import 'global';
 
+
+// main page
 @import 'components/menu';
 @import 'components/user-nav';
 @import 'sections/hero';
@@ -16,11 +18,11 @@
 @import 'sections/reviews';
 @import 'sections/app';
 @import 'sections/footer';
-
-
-
 @import 'components/form';
 @import 'components/address';
 @import 'components/social';
+
+
+// catalog
 
 @import 'media';

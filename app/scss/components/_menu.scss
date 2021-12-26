@@ -6,7 +6,6 @@
 
       &--footer {
             padding: 0;
-
       }
 
       &__list {
@@ -30,7 +29,6 @@
             }
 
             &--footer {
-
                   &:not(:last-child) {
                         margin: 0 0 20px 0;
                         margin-bottom: 20px;
@@ -41,6 +39,10 @@
       &__link {
             @include font-prop (18px, 1.2);
             transition: all 0.3s;
+
+            &--active {
+                  color: $orange-900;
+            }
       }
 
 }
