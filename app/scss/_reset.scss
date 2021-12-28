@@ -1,5 +1,6 @@
 html {
    box-sizing: border-box;
+   height: 100%;
 }
 
 *,
@@ -68,12 +69,10 @@ address {
    font-style: normal;
 }
 
-button {
-   cursor: pointer;
-}
-
 a[class],
 button[class],
-input[class] {
+input[class],
+select[class] {
    outline: transparent;
+   cursor: pointer;
 }

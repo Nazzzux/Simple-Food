@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="icon" href="images/favicon/favicon.jpg" type="images/x-icon">
    <link rel="stylesheet" href="css/style.min.css">
-   <title>Сервис доставки еды Simple Food | Главная</title> 
+   <title>Сервис доставки еды Simple Food | Блюда</title> 
 </head>
 <body>
    <header class="header">
@@ -55,6 +55,7 @@
       </div>
    </header>
    <main class="main">
+      <h1 class="sr-only">Страница каталога сервиса доставки еды Simple Food</h1>
       <div class="breadcrumbs">
          <div class="container">
             <ul class="breadcrumbs__list">
@@ -71,6 +72,61 @@
             </ul>
          </div>
       </div>
+      <section class="catalog">
+         <div class="container">
+            <div class="catalog-top">
+               <h2 class="catalog__title title">Каталог продуктов</h2>
+               <ul class="catalog-top__filter-list">
+                  <li class="catalog-top__filter-item">
+                     <select class="catalog-top__word-select select">
+                        <option value="">По названию</option>
+                        <option value="">По дате</option>
+                        <option value="">По 3132</option>
+                        <option value="">По оптыоатмылвоыолв</option>
+                     </select>
+                  </li>
+                  <li class="catalog-top__filter-item">
+                     <select class="catalog-top__num-select select">
+                        <option value="">По 12</option>
+                        <option value="">По 24</option>
+                        <option value="">По 36</option>
+                        <option value="">По 48</option>
+                     </select>
+                  </li>
+               </ul>
+            </div>
+            <div class="catalog__inner">
+               <ul class="catalog__list">
+                  <li class="catalog__item">
+                     <div class="filter-category">
+                        <h3 class="filter-category__title filter-title">
+                           Категории
+                        </h3>
+                     </div>
+                  </li>
+                  <li class="catalog__item">
+                     <div class="filter-offer">
+                        <h3 class="filter-offer__title filter-title">
+                           Предложения
+                        </h3>
+                     </div>
+                  </li>
+                  <li class="catalog__item">
+                     <div class="filter-price">
+                        <h3 class="filter-price__title filter-title">
+                           Цена
+                        </h3>
+                     </div>
+                  </li>
+
+               </ul>
+               <div class="catalog__content">
+
+                  
+               </div>
+            </div>
+         </div>
+      </section>
    </main>
    
    <footer class="footer">
@@ -196,5 +252,5 @@
    </footer>
 
       <script src="js/main.min.js"></script>
-      </body>
+</body>
 </html>

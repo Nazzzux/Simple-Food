@@ -2,7 +2,7 @@
 @import 'reset';
 @import 'libs';
 @import 'vars';
-@import 'global';
+@import "global";
 
 
 // main page
@@ -24,5 +24,62 @@
 
 
 // catalog
+.catalog {
+   padding: 60px 0 120px;
+   // .catalog__title
+   &__title {
+      margin-bottom: 0;
+   }
+   // .catalog__inner
+   &__inner {
+   }
+
+   &__list {
+      max-width: 270px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__item{
+      border: 1px solid $gray;
+      border-radius: 3px;
+      &:not(:last-child){
+         margin-bottom: 30px;
+      }
+   }
+   // .catalog__content
+   &__content {
+   }
+}
+
+.catalog-top {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 60px;
+   // .catalog-top__filters
+   &__filter-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+   }
+   // .catalog-top__word-filter
+   &__filter-item {
+         &:not(:last-child){
+         margin-right: 15px;
+      }
+   }
+
+   // .catalog-top__word-select
+   &__word-select {
+   }
+   // .catalog-top__num-select
+   &__num-select {
+   }
+}
+
+
 
 @import 'media';
