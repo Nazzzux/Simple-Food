@@ -7,6 +7,6 @@ $(function(){
       slidesToShow: 1,
    });
 
-   var mixer = mixitup('.catalog__list');
+   var mixer = mixitup('.category__list');
 });
 

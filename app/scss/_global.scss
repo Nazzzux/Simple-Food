@@ -117,6 +117,15 @@ body {
    &:focus {
       border-color: $orange-900;
    }
+}
+
+.filter-title {
+   padding: 15px 15px;
+   text-align: left;
+   @include font-prop(24px, 1.2);
+   color: $darkBlue-900;
+   border-bottom: 1px solid $gray;
+}
 
 .breadcrumbs {
    background-color: $orange-600;
@@ -152,3 +161,6 @@ body {
       }
    }
 }
+
+
+
