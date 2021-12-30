@@ -1,4 +1,6 @@
-$(function(){
+$(function () {
+
+
 
    $('.reviews__list').slick({
       dots: true,
@@ -7,6 +9,17 @@ $(function(){
       slidesToShow: 1,
    });
 
+   $('.filter-price__input').ionRangeSlider({
+      type: 'double',
+      onStart: function (data) {
+         $('.filter-price__from').text(data.from);
+         $('.filter-price__to').text(data.to);
+      },
+      onChange: function (data) {
+         $('.filter-price__from').text(data.from);
+         $('.filter-price__to').text(data.to);
+      },
+   });
+
    var mixer = mixitup('.category__list');
 });
-
