@@ -340,12 +340,12 @@
                      </a>
                      <ul class="pagination__list">
                         <li class="pagination__item">
-                           <a class="pagination__link" href="#">
+                           <a class="pagination__link pagination__link--active pagination__link--state" href="#">
                               1
                            </a>
                         </li>
                         <li class="pagination__item">
-                           <a class="pagination__link" href="#">
+                           <a class="pagination__link pagination__link--state" href="#">
                               2
                            </a>
                         </li>
@@ -355,17 +355,17 @@
                            </span>
                         </li>
                         <li class="pagination__item">
-                           <a class="pagination__link" href="#">
+                           <a class="pagination__link pagination__link--state" href="#">
                               9
                            </a>
                         </li>
                         <li class="pagination__item">
-                           <a class="pagination__link" href="#">
+                           <a class="pagination__link pagination__link--state" href="#">
                               10
                            </a>
                         </li>
                      </ul>
-                     <a class="pagination__arrow pagination__next" href="#">
+                     <a class="pagination__arrow pagination__next pagination__link--state" href="#">
                         <svg class="pagination__arrow-svg" width="11" height="18">
                            <use xlink:href="images/sprite/images.svg#arrow-next"></use>
                         </svg>
@@ -373,6 +373,54 @@
                   </div>
                </div>
             </div>
+         </div>
+      </section>
+
+      <section class="app section">
+         <div class="container">
+            <div class="app__content" style="background-image: url('images/bg-images/app-bg.jpg');">
+               <h2 class="app__title title">Скачайте мобильное приложение</h2>
+               <p class="app__text">
+                  Рестораны, которые вы любите - в ваших руках. Устанавливайте приложение и заказывайте еду в любом
+                  удобном месте.
+               </p>
+               <ul class="app__list">
+                  <li class="app__item">
+                     <span class="sr-only">Скачать приложение из App Store</span>
+                     <a class="app__link" href="#" style="background-image: url('images/navigation/app-store.jpg');" width="135" height="40"></a>
+                  </li>
+                  <li class="app__item">
+                     <span class="sr-only">Скачать приложение из Google Play</span>
+                     <a class="app__link" href="#" style="background-image: url('images/navigation/google-play.jpg');" width="135" height="40"></a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </section>
+
+      <section class="promo section">
+         <div class="container">
+            <h2 class="promo__title title">Акции и скидки</h2>
+            <ul class="promo__list">
+               <li class="promo__item">
+                  <a class="promo__link" href="#">
+                     <img class="promo__img" src="images/promo/1.jpg" alt="Изображение пиццы" width="370" height="300">
+                     <h3 class="promo__item-title">Скидка 50% на вторую пиццу</h3>
+                  </a>
+               </li>
+               <li class="promo__item">
+                  <a class="promo__link" href="#">
+                     <img class="promo__img" src="images/promo/2.jpg" alt="Картошечка из KFC" width="370" height="300">
+                     <h3 class="promo__item-title">Картошечка из KFC даром при заказе бургера</h3>
+                  </a>
+               </li>
+               <li class="promo__item">
+                  <a class="promo__link" href="#">
+                     <img class="promo__img" src="images/promo/3.jpg" alt="Чёрные бургеры на чёрный день" width="370" height="300">
+                     <h3 class="promo__item-title">Чёрные бургеры на чёрный день</h3>
+                  </a>
+               </li>
+            </ul>
          </div>
       </section>
    </main>
