@@ -4,17 +4,23 @@
             margin-bottom: 45px;
       }
 
-            &__list {
-            position: relative;
+      &__list {
+            max-width: 990px;
+            width: 100%;
+            margin: 0 auto 48px;
+            min-width: 0;
+            // position: relative;
       }
+      // &__box{
+      //       min-width: 0;
+
+      // }
 
       &__review {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 990px;
-            width: 100%;
-            margin: 0 auto 48px;
+            min-width: 0;
       }
 
       &__img {
@@ -24,6 +30,7 @@
       &__quote {
             max-width: 570px;
             width: 100%;
+            padding: 0 40px;
             display: block;
             font-style: italic;
             position: relative;
@@ -41,13 +48,13 @@
 
             &::before {
                   background-image: url('../images/decor-img/quote-mark-top.svg');
-                  left: -38px;
+                  left: 0;
                   top: 0;
             }
 
             &::after {
                   background-image: url('../images/decor-img/quote-mark-bottom.svg');
-                  right: -38px;
+                  right: 0;
                   top: 128px;
             }
       }
@@ -68,6 +75,14 @@
             font-weight: normal;
             font-style: normal;
             @include font-prop(14px, 1.3);
+      }
+
+      .swiper-buttons {
+            fill: $gray;
+            stroke: $gray;
+            &::after{
+                  display: none;
+            }
       }
 
       // .slick-dots {
