@@ -7,14 +7,15 @@ $(function () {
 		spaceBetween: 20,
 		loop: true,
 
-		// pagination: {
-		// 	el: ".dots--top",
-		// 	clickable: true,
-		// },
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+
 		navigation: {
       	clickable: true,
-			nextEl: '.swiper-button-prev',
-			prevEl: '.swiper-button-next',
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
 		}
    });
    // swiper
