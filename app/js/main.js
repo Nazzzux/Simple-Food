@@ -1,11 +1,14 @@
 $(function () {
 
-   // swiper
+   $('.menu__button').on('click', function(){
+      $('.menu__button').toggleClass('menu__button--active');
+   });
 
    var swiper = new Swiper('.reviews__list', {
 		slidesPerView: 1,
 		spaceBetween: 20,
 		loop: true,
+      simulateTouch: true,
 
 		pagination: {
 			el: ".swiper-pagination",
@@ -18,21 +21,6 @@ $(function () {
 			prevEl: '.swiper-button-prev',
 		}
    });
-   // swiper
-
-
-   // slick-slider
-   
-   // $('.reviews__list').slick({
-   //    dots: true,
-   //    prevArrow: '<button type="button" class="slick-btn slick-prev"><span class="sr-only">Кнопка предыдущий слайд</span><svg class="slick-svg" width="34" height="34"><use xlink:href="images/sprite/images.svg#prev_arrow"></svg></button>',
-   //    nextArrow: '<button type="button" class="slick-btn slick-next"><span class="sr-only">Кнопка следующий слайд</span><svg class="slick-svg" width="34" height="34"><use xlink:href="images/sprite/images.svg#next_arrow"></svg></button>',
-   //    slidesToShow: 1,
-   // });
-
-   // slick-slider
-
-
 
    $('.filter-price__input').ionRangeSlider({
       type: 'double',

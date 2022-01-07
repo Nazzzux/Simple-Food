@@ -1,0 +1,32 @@
+.catalog {
+   padding: 60px 0 120px;
+   // .catalog__title
+   &__title {
+      margin-bottom: 0;
+   }
+   // .catalog__inner
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__list {
+      max-width: 270px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-right: 31px;
+   }
+
+   &__item{
+      border: 1px solid $gray;
+      border-radius: 3px;
+      background-color: $white;
+      &:not(:last-child){
+         margin-bottom: 30px;
+      }
+   }
+   // .catalog__content
+   &__content {
+   }
+}

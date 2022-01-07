@@ -1,0 +1,31 @@
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+   .menu{
+      padding: 24px 0;
+   }
+}
+
+@media (max-width: 768px) {
+   
+   .menu{
+      &__list{
+         display: none;
+      }
+
+      &__button{
+         display: flex; 
+
+      }
+   }
+
+   .user-nav{
+      margin: 0 7px 0 auto;
+   }
+}
+
+@media (max-width: 576px) {
+
+}

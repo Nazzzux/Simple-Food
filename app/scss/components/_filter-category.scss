@@ -1,0 +1,7 @@
+.filter-category {
+   &__input {
+      &:checked + .filter-category__text{
+         color: $orange-900;
+      }
+   }
+}

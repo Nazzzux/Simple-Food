@@ -45,4 +45,40 @@
             }
       }
 
+      &__button-span {
+            height: 2px;
+            width: 100%;
+            background-color: $darkBlue-900;
+
+            &::before,
+            &::after {
+                  content: '';
+                  height: 2px;
+                  left: 10px;
+                  right: 10px;
+                  position: absolute;
+                  background-color: $darkBlue-900;
+                  transition: 0.3s all ease;
+            }
+
+            &::before {
+                  top: 10px;
+            }
+
+            &::after {
+                  bottom: 10px;
+            }
+      }
+
+      &__button {
+            width: 50px;
+            height: 40px;
+            padding: 10px;
+            border-radius: 3px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            display: none;
+            transition: 0.3s all ease;
+      }
 }

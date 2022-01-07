@@ -1,0 +1,11 @@
+.catalog-box {
+   &__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+      margin-bottom: 60px;
+   }
+   &__item {
+      text-align: center;
+   }
+}

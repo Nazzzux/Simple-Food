@@ -76,6 +76,17 @@
             @include font-prop(14px, 1.3);
       }
 
+      &__button-wrp{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+      }
+      &__button-box{
+            min-width: 220px;
+            height: 38px;
+            position: relative;
+      }
+
       .swiper-pagination-bullets{
             margin: 0 0;
       }
@@ -108,17 +119,6 @@
             background-color: $orange-900;
       }
 
-      &__button-wrp{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-      }
-      &__button-box{
-            min-width: 220px;
-            height: 38px;
-            position: relative;
-      }
-
       .swiper-pagination{
             display: flex;
             justify-content: center;
@@ -127,25 +127,16 @@
             padding: 0 56px;
       }
 
-      .swiper-buttons {
-            top: 0;
-            &:focus{
-                  outline: transparent;
-            }
-            &:after{
-                  display: none;
-            }
-      }
-
       .swiper-button-next {
             right: 0;
       }
 
-      .swiper--arrow {
+      .swiper-arrow {
             display: block;
             width: 34px;
             height: 34px;
             border-radius: 50%;
+            top: 0;
             fill: $gray;
             stroke: $gray;
             &:hover {
@@ -162,84 +153,4 @@
                   stroke: $orange-900;
             }
       }
-
-      // .slick-dots {
-      //       display: flex;
-      //       // display: inline-flexbox;
-      //       justify-content: center;
-      
-      //       li:not(:last-child) {
-      //             margin-right: 15px;
-      //       }
-      
-      //       button {
-      //             font-size: 0;
-      //             display: block;
-      //             width: 15px;
-      //             height: 15px;
-      //             border-radius: 50%;
-      //             background-color: $gray;
-      //       }
-      
-      //       .slick-active button {
-      //             background-color: $orange-900;
-      //       }
-      
-      //       button,
-      //       .slick-active button {
-      //             &:hover {
-      //                   outline: 2px solid $orange-600;
-      //                   background-color: $orange-300;
-      //             }
-      
-      //             &:focus {
-      //                   background-color: initial;
-      //                   outline: 2px solid $orange-900;
-      //             }
-      
-      //             &:active {
-      //                   background-color: $orange-600;
-      //                   outline: transparent;
-      //             }
-      //       }
-      // }
-
-      // .slick-dots{
-      //       position: relative;
-      // }
-
-      // .slick-btn {
-      //       width: 34px;
-      //       height: 34px;
-      //       fill: $gray;
-      //       stroke: $gray;
-      //       position: absolute;
-      //       bottom: -9px;
-      //       border-radius: 50%;
-
-      //       &:hover {
-      //             fill: $orange-300;
-      //             stroke: $orange-300;
-      //       }
-
-      //       &:focus {
-      //             outline: 3px solid $orange-900;
-      //       }
-
-      //       &:active {
-      //             outline: transparent;
-      //             stroke: $orange-900;
-      //       }
-      // }
-
-      // .slick-prev {
-      //       // left: 505px;
-      //       left: 300px;
-
-      // }
-
-      // .slick-next {
-      //       // left: 690px;
-      //       right: 300px;
-      // }
 }
