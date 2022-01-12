@@ -1,6 +1,8 @@
 .address {
    &__list {
+         padding-top: 15px;
          margin-bottom: 15px;
+         margin: 0 0 15px -7px;
    }
 
    &__item:not(:nth-child(4n+4)) {

@@ -2,6 +2,7 @@ $(function () {
 
    $('.menu__button').on('click', function(){
       $('.menu__button').toggleClass('menu__button--active');
+      $('.menu__mobile').toggleClass('menu__mobile--active');
    });
 
    var swiper = new Swiper('.reviews__list', {

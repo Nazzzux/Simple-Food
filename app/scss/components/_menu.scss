@@ -14,6 +14,23 @@
             align-items: center;
             margin: 0 63px 0 auto;
 
+            &--mobile{
+                  padding: 14px 0;
+                  flex-direction: column;
+                  width: 100%;
+                  position: relative;
+
+                  &::after{
+                        content: '';
+                        left: -15px;
+                        right: 0;
+                        bottom: 0;
+                        height: 1px;
+                        background-color: $gray;
+                        position: absolute;
+                  }
+            }
+
             &--footer {
                   display: block;
                   max-width: 580px;
@@ -31,7 +48,12 @@
             &--footer {
                   &:not(:last-child) {
                         margin: 0 0 20px 0;
-                        margin-bottom: 20px;
+                  }
+            }
+
+            &--mobile{
+                  &:not(:last-child){
+                        margin: 0 0 2px 0;
                   }
             }
       }
@@ -42,6 +64,12 @@
 
             &--active {
                   color: $orange-900;
+            }
+
+            &--mobile{
+                  display: block;
+                  width: 100%;
+                  padding: 10px 0;
             }
       }
 
@@ -80,5 +108,45 @@
             align-items: center;
             display: none;
             transition: 0.3s all ease;
+      }
+
+      &__mobile{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 80%;
+            transform: translateX(-2000%);
+            padding: 0 0 0 15px;
+            
+            transition: all 0.3 ease;
+
+            &.menu__mobile--active{
+                  transform: translateX(0);
+            }
+      }
+
+      &__mobile-top{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 25px 0;
+            position: relative;
+
+            &::after{
+                  content: '';
+                  left: -15px;
+                  right: 0;
+                  bottom: 0;
+                  height: 1px;
+                  background-color: $gray;
+                  position: absolute;
+            }
+      }
+
+      &__mobile-close{
+            width: 44px;
+            height: 44px;
+            margin-right: 13px;
       }
 }

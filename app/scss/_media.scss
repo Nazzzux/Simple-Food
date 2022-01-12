@@ -9,7 +9,6 @@
 }
 
 @media (max-width: 768px) {
-   
    .menu{
       &__list{
          display: none;
@@ -17,7 +16,6 @@
 
       &__button{
          display: flex; 
-
       }
    }
 
@@ -27,5 +25,8 @@
 }
 
 @media (max-width: 576px) {
-
+   .logo__img--media{
+      width: 115px;
+      height: 23px;
+   }
 }
