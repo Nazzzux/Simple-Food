@@ -118,11 +118,14 @@
             width: 80%;
             transform: translateX(-2000%);
             padding: 0 0 0 15px;
+            background-color: $white;
+            z-index: 35;
             
-            transition: all 0.3 ease;
+            transition: all 0.5 ease;
 
             &.menu__mobile--active{
                   transform: translateX(0);
+                  overflow-y: auto;
             }
       }
 

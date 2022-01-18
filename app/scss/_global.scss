@@ -9,6 +9,14 @@ body {
    flex-direction: column;
 }
 
+.body.lock{
+   background-color: rgba($black, 0.5);
+   overflow: hidden;
+   main {
+      display: none;
+   }
+}
+
 .main {
    flex-grow: 1;
 }
