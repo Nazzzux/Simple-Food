@@ -3,7 +3,7 @@ body {
    font-family: 'Rubik', sans-serif;
    font-weight: 400;
    color: $dark;
-   @include font-prop (20px, 1.5);
+   @include font-prop (20px, 1.3);
    height: 100%;
    display: flex;
    flex-direction: column;
@@ -12,7 +12,7 @@ body {
 .body.lock{
    background-color: rgba($black, 0.5);
    overflow: hidden;
-   main {
+   .main {
       display: none;
    }
 }

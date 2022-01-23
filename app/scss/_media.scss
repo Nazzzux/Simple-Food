@@ -1,15 +1,11 @@
 @media (max-width: 1200px) {
-   .hero{
-      &__content{
-         
-      }
-   }
+   
 }
 
 @media (max-width: 992px) {
 
    .hero{
-      &__content{
+      &__content{ 
          padding: 100px 0;
          height: initial;
          position: relative;
@@ -32,11 +28,47 @@
          max-width: 60%;
       }
    }
+
+   .category{
+      &__list{
+         grid-template-columns: repeat(4, 1fr);
+         grid-gap: 15px;
+      }
+   }
+
+   .offer{
+      &__inner{
+         position: relative;
+         z-index: 1;
+            &::after{
+               content: '';
+               top: 0;
+               bottom: 0;
+               left: 0;
+               right: 0;
+               background-color: rgba($silver-100, 0.7);
+               position: absolute;
+               z-index: -1;
+            }
+      }
+
+      &__content{
+         max-width: 70%;
+      }
+   }
 }
 
 @media (max-width: 768px) {
+   body{
+      font-size: 14px;
+   }
+
    .section{
       padding-bottom: 30px;
+   }
+
+   .title{
+      font-size: 24px;
    }
 
    .btn{
@@ -64,7 +96,7 @@
    }
 
    .hero{
-      &__content{ 
+      &__content{
          padding: 25px 0;
       }
       &__title{
@@ -84,15 +116,78 @@
       }
    }
 
+   .category{
+      &__title{
+         margin-bottom: 30px;
+      }
+
+      &__list{
+         grid-template-columns: repeat(3, 1fr);
+         grid-gap: 10px 5px;
+         margin-bottom: 18px;
+      }
+   }
+
+   .buttons-filter{
+      margin-bottom: 20px;
+      &__button{
+         padding: 12px 16px;
+      }
+      &__svg{
+         width: 20px;
+         height: 20px;
+      }
+   }
+
+   .offer{
+      &__inner{
+         padding: 25px 0 37px;
+      }
+   }
 }
 
-
 @media (max-width: 576px) {
-   
-
    .hero{
       &__text{
          max-width: 100%;
+      }
+   }
+
+   .category{
+      &__list{
+         grid-template-columns: repeat(2, 1fr);
+      }
+
+      &__show-more{
+         padding: 12px 10px;
+      }
+   }
+
+   .offer{
+      &__inner{
+         max-width: 100%;
+
+      }
+
+      &__content{
+         max-width: 100%;
+      }
+
+      &__text{
+         font-size: 16px;
+      }
+
+      &__item{
+         padding-left: 44px;
+         @include font-prop(18px, 1.5);
+
+         &:not(:last-child){
+            margin-bottom: 15px;
+         }
+      }
+
+      &__svg{
+         margin-right: 10px;
       }
    }
 }
