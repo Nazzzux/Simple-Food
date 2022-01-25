@@ -56,6 +56,13 @@
          max-width: 70%;
       }
    }
+
+   .restaurant{
+      &__list{
+         grid-gap: 15px;
+         grid-template-columns: repeat(2, 1fr);
+      }
+   }
 }
 
 @media (max-width: 768px) {
@@ -144,6 +151,12 @@
          padding: 25px 0 37px;
       }
    }
+
+   .restaurant{
+      &__title{
+         margin-bottom: 20px;
+      }
+   }
 }
 
 @media (max-width: 576px) {
@@ -189,5 +202,20 @@
       &__svg{
          margin-right: 10px;
       }
+   }
+
+   .restaurant{
+      &__list{
+         display: block;
+         
+      }
+
+      &__item{
+         
+      }
+   }
+
+   .restaurant-card{
+      margin: 0 auto;
    }
 }
