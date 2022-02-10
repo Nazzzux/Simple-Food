@@ -38,7 +38,11 @@
    }
 
    &__btn {
-      padding: 5px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 36px;
+      // padding: 5px 32px;
       border-radius: 20px;
       transition: all 0.2s;
 

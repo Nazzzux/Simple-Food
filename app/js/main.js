@@ -44,3 +44,16 @@ $(function () {
 
    var mixer = mixitup('.category__list');
 });
+
+
+var media = window.matchMedia('(max-width: 576px)');
+
+function mediaAdaptive({
+   if (media.matches) {
+      var swiper2 = new Swiper('.restaurant__wrapper', {
+         slidesPerView: 1,
+   		loop: true,
+         simulateTouch: true,
+      });
+   } 
+});
