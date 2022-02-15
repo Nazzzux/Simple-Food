@@ -30,6 +30,42 @@ $(function () {
 		}
    });
 
+//    var media = window.matchMedia("(max-width: 576px)");
+//    function mediaAdaptive({
+//       if (media.matches) {
+         
+//       };
+// });
+
+   var swiper2 = new Swiper('.restaurant__wrapper', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      simulateTouch: true,
+      speed: 300,
+
+      breakpoints: {       
+
+         576: {
+            slidesPerView: 1.9,
+         },
+
+         768: {
+            slidesPerView: 2,
+         },
+         
+         992: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+         },
+      },
+
+      pagination: {
+			el: ".restaurant__pagination",
+			clickable: true,
+		},
+   });
+
    $('.filter-price__input').ionRangeSlider({
       type: 'double',
       onStart: function (data) {
@@ -46,14 +82,3 @@ $(function () {
 });
 
 
-var media = window.matchMedia('(max-width: 576px)');
-
-function mediaAdaptive({
-   if (media.matches) {
-      var swiper2 = new Swiper('.restaurant__wrapper', {
-         slidesPerView: 1,
-   		loop: true,
-         simulateTouch: true,
-      });
-   } 
-});
