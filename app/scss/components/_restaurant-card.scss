@@ -3,7 +3,8 @@
    box-shadow: 0px 3px 3px rgba($black, 0.1);
    min-height: 420px;
    max-width: 370px;
-   
+//    margin: 0 auto;
+
    &:hover {
           box-shadow: 0px 3px 15px rgba($orange-600, 0.5);
       }
@@ -41,13 +42,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 36px;
-      // padding: 5px 32px;
+      // height: 36px;
+      padding: 5px 32px;
       border-radius: 20px;
       transition: all 0.2s;
 
       &:hover {
-            padding: 5px 10px 5px 54px;
+            padding: 10px 10px 10px 54px;
       }
    }
 }

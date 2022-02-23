@@ -46,14 +46,38 @@ $(function () {
 });
 
 
-var media = window.matchMedia('(max-width: 576px)');
-
-function mediaAdaptive({
-   if (media.matches) {
-      var swiper2 = new Swiper('.restaurant__wrapper', {
+const media = window.matchMedia('(max-width: 576px)');
+function myFunction(x) {
+   if (x.matches) {
+      var swiper2 = new Swiper ('.restaurant__wrapper', {
          slidesPerView: 1,
-   		loop: true,
-         simulateTouch: true,
+		   spaceBetween: 10,
+		   loop: true,
+         // simulateTouch: true,
+
       });
-   } 
-});
+
+      
+
+      // function myFunction() {
+      //    var element = document.getElementsByClassName('restaurant__wrapper');
+      //    element.classList.add('swiper');
+      // }
+   } else {
+      
+   }
+};
+myFunction(media);
+
+media.addListener(myFunction);
+
+
+// function mediaAdaptive({
+//    if (media.matches) {
+//       var swiper2 = new Swiper('.restaurant__wrapper', {
+//          slidesPerView: 1,
+//    		loop: true,
+//          simulateTouch: true,
+//       });
+//    } 
+// });
