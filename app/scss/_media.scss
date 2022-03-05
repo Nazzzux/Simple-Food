@@ -211,15 +211,16 @@
    .restaurant{
       &__list{
          // grid-template-columns: repeat(1, 1fr);
-         display: block;
+         display: inline-block;
       }
-
+      
       &__item{
+         
          
       }
 
-      .swiper-pagination {
-         display: block;
-      }
+      // .swiper-pagination {
+      //    display: block;
+      // }
    }
 }
