@@ -14,7 +14,7 @@ $(function () {
 
    var swiper = new Swiper('.reviews__list', {
 		slidesPerView: 1,
-		spaceBetween: 20,
+		spaceBetween: 10,
 		loop: true,
       simulateTouch: true,
 

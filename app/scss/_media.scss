@@ -67,6 +67,19 @@
    .restaurant-card{
       margin: 0 auto;
    }
+
+   .reviews{
+      &__img{
+         width: 230px;
+         height: 230px;
+         margin-bottom: 30px;
+      }
+
+      &__review{
+         justify-content: center;
+         max-width: 100%;
+      }
+   }
 }
 
 @media (max-width: 768px) {
@@ -162,7 +175,29 @@
       }
    }
 
-   
+   .reviews{
+      &__title{
+         margin-bottom: 30px;
+      }
+
+      &__quote-text{
+         box-sizing: content-box;
+         max-width: 87%;
+      }
+
+      &__img{
+         width: 100px;
+         height: 100px;
+      }
+
+      &__author{
+         margin-top: 20px;
+      }
+
+      &__about{
+         margin-top: 10px;
+      }
+   }
 }
 
 @media (max-width: 576px) {
@@ -220,5 +255,10 @@
       }
    }
 
-   
+   .reviews{
+      &__quote-text{
+         padding: 0 28px;
+         max-width: 79%;
+      }
+   }
 }
