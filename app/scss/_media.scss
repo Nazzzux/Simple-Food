@@ -70,8 +70,6 @@
 
    .reviews{
       &__img{
-         width: 230px;
-         height: 230px;
          margin-bottom: 30px;
       }
 
@@ -197,6 +195,10 @@
       &__about{
          margin-top: 10px;
       }
+
+      &__button-wrp{
+         margin-top: -20px;
+      }
    }
 }
 
@@ -258,13 +260,12 @@
    .reviews{
       &__quote-text{
          padding: 0 28px;
-         max-width: 79%;
+         max-width: 81%;
       }
 
       &__img{
          width: 100px;
          height: 100px;
-         position: relative;
       }
 
       &__button-box{
