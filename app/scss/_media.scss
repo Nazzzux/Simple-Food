@@ -1,5 +1,9 @@
 @media (max-width: 1200px) {
-   
+   .app{
+      &__text{
+         max-width: 50%;
+      }
+   }
 }
 
 @media (max-width: 992px) {
@@ -78,6 +82,16 @@
          max-width: 100%;
       }
    }
+
+   .app{
+      &__title{
+         max-width: 51%;
+      }
+
+      &__link{
+         width: 120px;
+      }
+   }  
 }
 
 @media (max-width: 768px) {
@@ -200,6 +214,16 @@
          margin-top: -20px;
       }
    }
+
+   .app{
+      &__title{
+         margin-bottom: 15px; 
+      }
+
+      &__text{
+         margin-bottom: 15px;
+      }
+   }
 }
 
 @media (max-width: 576px) {
@@ -294,6 +318,18 @@
       .swiper-pagination{
          display: none;
       }
+   }
 
+   .app{
+      &__content{
+         background-image: none;
+      }
+
+      &__title{
+         max-width: fit-content;
+      }
+      &__text{
+         max-width: fit-content;
+      }
    }
 }
