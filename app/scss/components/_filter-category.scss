@@ -1,6 +1,22 @@
 .filter-category {
-   &__input {
-      &:checked + .filter-category__text{
+   &__list{
+      padding: 20px 15px;
+   }
+
+   &__item{
+      &:not(:last-child){
+         margin-bottom: 2px;
+      }
+   }
+
+   &__link{
+      @include font-prop(18px, 1.3);
+      display: block;
+      padding: 5px 0;
+      width: 100%;
+      cursor: pointer;
+
+      &--active{
          color: $orange-900;
       }
    }

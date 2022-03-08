@@ -2,25 +2,37 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
+   flex-wrap: wrap;
    margin-bottom: 60px;
-   // .catalog-top__filters
+
+   &__btn{
+      display: none;
+      background-image: url('../../images/icons/catalog-filter-btn.svg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0 10px 0 0;
+      width: 47px;
+      height: 47px;
+   }
+
    &__filter-list {
       display: flex;
       justify-content: space-between;
       align-items: center;
       
    }
-   // .catalog-top__word-filter
+
    &__filter-item {
       background-color: $white;
          &:not(:last-child){
          margin-right: 15px;
       }
    }
-   // .catalog-top__word-select
+
    &__word-select {
    }
-   // .catalog-top__num-select
+
    &__num-select {
    }
 }

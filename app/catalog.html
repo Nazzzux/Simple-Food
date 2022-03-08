@@ -13,16 +13,16 @@
       <div class="container">
          <nav class="menu">
             <a class="logo" href="#">
-               <img class="logo__img" src="images/navigation/logo.svg" alt="Логотип" width="200" height="39">
+               <img class="logo__img--media" src="images/navigation/logo.svg" alt="Логотип" width="200" height="39">
             </a>
             <ul class="menu__list">
                <li class="menu__item">
-                  <a class="menu__link link-state" href="#">
+                  <a class="menu__link menu__link--active link-state" href="#">
                      Главная
                   </a>
                </li>
                <li class="menu__item">
-                  <a class="menu__link menu__link--active link-state" href="#">
+                  <a class="menu__link link-state" href="#">
                      Блюда
                   </a>
                </li>
@@ -51,6 +51,93 @@
                   </a>
                </li>
             </ul>
+            <button class="menu__button" type="button">
+               <span class="sr-only">Кнопка меню</span>
+               <span class="menu__button-span"></span>
+            </button>
+            <div class="menu__mobile">
+               <div class="menu__mobile-top">
+                  <a class="logo" href="#">
+                     <img class="logo__img" src="images/navigation/logo.svg" alt="Логотип" width="200" height="39">
+                  </a>
+                  <button class="menu__mobile-close" type="button">
+                     <svg class="user-nav__svg" width="18" height="18">
+                        <use xlink:href="images/sprite/images.svg#close"></use>
+                     </svg>
+                  </button>
+               </div>
+               <ul class="menu__list--mobile">
+                  <li class="menu__item--mobile">
+                     <a class="menu__link--mobile menu__link--active link-state" href="#">
+                        Главная
+                     </a>
+                  </li>
+                  <li class="menu__item--mobile">
+                     <a class="menu__link--mobile link-state" href="#">
+                        Блюда
+                     </a>
+                  </li>
+                  <li class="menu__item--mobile">
+                     <a class="menu__link--mobile link-state" href="#">
+                        Контакты
+                     </a>
+                  </li>
+               </ul>
+               <address class="address">
+                  <ul class="address__list">
+                     <li class="address__item">
+                        <a class="address__link link-state" href="https://goo.gl/maps/q33vHwLpFBGaMjcw6" target="_blank">
+                           <svg class="address__svg" width="24" height="24">
+                              <use xlink:href="images/sprite/images.svg#location"></use>
+                           </svg>
+                           ул. Смирнова, 2/3
+                           <a>
+                     </li>
+                     <li class="address__item">
+                        <a class="address__link link-state" href="tel:79068057043">
+                           <svg class="address__svg" width="24" height="24">
+                              <use xlink:href="images/sprite/images.svg#phone"></use>
+                           </svg>
+                           79068057043
+                        </a>
+                     </li>
+                     <li class="address__item">
+                        <a class="address__link link-state" href="mailto:support@sfood.com">
+                           <svg class="address__svg" width="24" height="24">
+                              <use xlink:href="images/sprite/images.svg#envelope"></use>
+                           </svg>
+                           support@sfood.com
+                        </a>
+                     </li>
+                  </ul>
+                  <ul class="social">
+                     <li class="social__item">
+                        <a class="social__link" href="#">
+                           <span class="sr-only">Связаться через Фейсбук</span>
+                           <svg class="social__svg" width="10" height="21">
+                              <use xlink:href="images/sprite/images.svg#facebook"></use>
+                           </svg>
+                        </a>
+                     </li>
+                     <li class="social__item">
+                        <a class="social__link" href="#">
+                           <span class="sr-only">Ссылка на Твиттер аккаутн</span>
+                           <svg class="social__svg" width="21" height="17">
+                              <use xlink:href="images/sprite/images.svg#twitter"></use>
+                           </svg>
+                        </a>
+                     </li>
+                     <li class="social__item">
+                        <a class="social__link" href="#">
+                           <span class="sr-only">Ссылка на Инстаграм аккаутн</span>
+                           <svg class="social__svg" width="20" height="20">
+                              <use xlink:href="images/sprite/images.svg#instagram"></use>
+                           </svg>
+                        </a>
+                     </li>
+                  </ul>
+               </address>
+            </div>
          </nav>
       </div>
    </header>
@@ -76,6 +163,7 @@
          <div class="container">
             <div class="catalog-top">
                <h2 class="catalog__title title">Каталог продуктов</h2>
+               <button class="catalog-top__btn"></button>
                <ul class="catalog-top__filter-list">
                   <li class="catalog-top__filter-item">
                      <select class="catalog-top__word-select select">
@@ -102,56 +190,32 @@
                         <h3 class="filter-category__title filter-title">
                            Категории
                         </h3>
-                        <form class="filter-category__form filter__form" action="#">
-                           <label class="filter-category__label filter__label link-state">
-                              <input class="filter-category__input filter__input" type="checkbox" name="burgers">
-                              <span class="filter-category__text">
-                                 Бургеры
-                              </span>
-                           </label>
-                           <label class="filter-category__label filter__label link-state">
-                              <input class="filter-category__input filter__input" type="checkbox" name="pizza">
-                              <span class="filter-category__text">
-                                 Пицца
-                              </span>
-                           </label>
-                           <label class="filter-category__label filter__label link-state">
-                              <input class="filter-category__input filter__input" type="checkbox" name="sandwiches" checked>
-                              <span class="filter-category__text">
-                                 Сендвичи
-                              </span>
-                           </label>
-                           <label class="filter-category__label filter__label link-state">
-                              <input class="filter-category__input filter__input" type="checkbox" name="asian">
-                              <span class="filter-category__text">
-                                 Азиатская кухня
-                              </span>
-                           </label>
-                           <label class="filter-category__label filter__label link-state">
-                              <input class="filter-category__input filter__input" type="checkbox" name="sushi sets">
-                              <span class="filter-category__text">
-                                 Сеты
-                              </span>
-                           </label>
-                           <label class="filter-category__label filter__label link-state">
-                              <input class="filter-category__input filter__input" type="checkbox" name="european">
-                              <span class="filter-category__text">
-                                 Европейская кухня
-                              </span>
-                           </label>
-                           <label class="filter-category__label filter__label link-state">
-                              <input class="filter-category__input filter__input" type="checkbox" name="beverages">
-                              <span class="filter-category__text">
-                                 Напитки
-                              </span>
-                           </label>
-                           <label class="filter-category__label filter__label link-state">
-                              <input class="filter-category__input filter__input" type="checkbox" name="alcohol">
-                              <span class="filter-category__text">
-                                 Алкоголь
-                              </span>
-                           </label>
-                        </form>
+                     <ul class="filter-category__list">
+                        <li class="filter-category__item">
+                           <a class="filter-category__link" href="#">Бургеры</a>
+                        </li>
+                        <li class="filter-category__item">
+                           <a class="filter-category__link" href="#">Пицца</a>
+                        </li>
+                        <li class="filter-category__item">
+                           <a class="filter-category__link" href="#">Мендвичи</a>
+                        </li>
+                        <li class="filter-category__item">
+                           <a class="filter-category__link filter-category__link--active" href="#">Азиатская кухня</a>
+                        </li>
+                        <li class="filter-category__item">
+                           <a class="filter-category__link" href="#">Сеты</a>
+                        </li>
+                        <li class="filter-category__item">
+                           <a class="filter-category__link" href="#">Европейская кухня</a>
+                        </li>
+                        <li class="filter-category__item">
+                           <a class="filter-category__link" href="#">Напитки</a>
+                        </li>
+                        <li class="filter-category__item">
+                           <a class="filter-category__link" href="#">Алкоголь</a>
+                        </li>
+                     </ul>
                      </div>
                   </li>
                   <li class="catalog__item">
@@ -377,7 +441,7 @@
       </section>
       <section class="app section">
          <div class="container">
-            <div class="app__content" style="background-image: url('images/bg-images/app-bg.jpg');">
+            <div class="app__content">
                <h2 class="app__title title">Скачайте мобильное приложение</h2>
                <p class="app__text">
                   Рестораны, которые вы любите - в ваших руках. Устанавливайте приложение и заказывайте еду в любом
