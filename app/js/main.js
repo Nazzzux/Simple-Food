@@ -14,12 +14,12 @@ $(function () {
 
    $('.catalog-top__btn').on('click', function(){
       $('.catalog__inner-wrp').toggleClass('catalog__inner-wrp--active');
-
+      $('.body').toggleClass('lock');      
    });
 
    $('.catalog__inner-btn').on('click', function(){
       $('.catalog__inner-wrp').toggleClass('catalog__inner-wrp--active');
-
+      $('.body').toggleClass('lock');
    });
 
    var swiper = new Swiper('.reviews__list', {
