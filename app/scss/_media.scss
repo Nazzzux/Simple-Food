@@ -115,6 +115,14 @@
          width: 120px;
       }
    }  
+
+   //Catalog Page
+
+   .catalog-box{
+      &__list{
+         grid-template-columns: repeat(3, minmax(170px, 210px));
+      }
+   }
 }
 
 @media (max-width: 768px) {
@@ -293,8 +301,38 @@
          margin-bottom: 20px;
       }
 
-      &__list{
+      &__inner-wrp{
+         position: absolute;
          transform: translateX(-300%);
+         transition: all 0.3s ease;
+         top: 0;
+         bottom: 0;
+         left: 0;
+         
+         &--active{
+            transform: translateX(0);
+            width: 85%;
+            background-color: $white;
+            overflow-y: scroll;
+         }
+      }
+
+      &__inner-btn{
+         background-color: $orange-200;
+         position: absolute;
+         top: 20px;
+         right: 20px;
+         display: inline-block;
+         padding: 11px 11px 6px 11px;
+
+
+         &:focus{
+            outline: 2px solid $orange-900;
+         }
+      }
+
+      &__list{
+         margin-top: 80px;
       }
    }
 
@@ -302,10 +340,20 @@
       margin-bottom: 30px;
       &__btn{
          display: block;
+         border-radius: 5px;
+         &:focus{
+            outline: 2px solid $orange-900;
+         }
       }
 
       &__filter-list{
          margin-right: auto;
+      }
+   }
+
+   .catalog-box{
+      &__list{
+         margin-bottom: 30px;
       }
    }
 
@@ -452,5 +500,20 @@
 
    .address{
       width: 100%;
+   }
+
+   //Catalog Page
+
+   .catalog-box{
+      &__list{
+         grid-template-columns: repeat(2, minmax(170px, 210px));
+         grid-gap: 5px 10px;
+      }
+   }
+
+   .food-card{
+      &__title{
+         width: 95%;
+      }
    }
 }

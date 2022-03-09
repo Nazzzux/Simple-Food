@@ -163,104 +163,113 @@
          <div class="container">
             <div class="catalog-top">
                <h2 class="catalog__title title">Каталог продуктов</h2>
+               <span class="sr-only">Кнопка для отображения меню категорий для выбора</span>
                <button class="catalog-top__btn"></button>
                <ul class="catalog-top__filter-list">
                   <li class="catalog-top__filter-item">
                      <select class="catalog-top__word-select select">
-                        <option value="">По названию</option>
-                        <option value="">По дате</option>
-                        <option value="">По 3132</option>
-                        <option value="">По оптыоатмылвоыолв</option>
+                        <option value="title">По названию</option>
+                        <option value="data">По дате</option>
+                        <option value="random">По 3132</option>
+                        <option value="maxmin">По убыванию</option>
                      </select>
                   </li>
                   <li class="catalog-top__filter-item">
                      <select class="catalog-top__num-select select">
-                        <option value="">По 12</option>
-                        <option value="">По 24</option>
-                        <option value="">По 36</option>
-                        <option value="">По 48</option>
+                        <option value="12">По 12</option>
+                        <option value="24">По 24</option>
+                        <option value="36">По 36</option>
+                        <option value="48">По 48</option>
                      </select>
                   </li>
                </ul>
             </div>
             <div class="catalog__inner">
-               <ul class="catalog__list">
-                  <li class="catalog__item">
-                     <div class="filter-category">
-                        <h3 class="filter-category__title filter-title">
-                           Категории
-                        </h3>
-                     <ul class="filter-category__list">
-                        <li class="filter-category__item">
-                           <a class="filter-category__link" href="#">Бургеры</a>
-                        </li>
-                        <li class="filter-category__item">
-                           <a class="filter-category__link" href="#">Пицца</a>
-                        </li>
-                        <li class="filter-category__item">
-                           <a class="filter-category__link" href="#">Мендвичи</a>
-                        </li>
-                        <li class="filter-category__item">
-                           <a class="filter-category__link filter-category__link--active" href="#">Азиатская кухня</a>
-                        </li>
-                        <li class="filter-category__item">
-                           <a class="filter-category__link" href="#">Сеты</a>
-                        </li>
-                        <li class="filter-category__item">
-                           <a class="filter-category__link" href="#">Европейская кухня</a>
-                        </li>
-                        <li class="filter-category__item">
-                           <a class="filter-category__link" href="#">Напитки</a>
-                        </li>
-                        <li class="filter-category__item">
-                           <a class="filter-category__link" href="#">Алкоголь</a>
-                        </li>
-                     </ul>
-                     </div>
-                  </li>
-                  <li class="catalog__item">
-                     <div class="filter-offer">
-                        <h3 class="filter-offer__title filter-title">
-                           Предложения
-                        </h3>
-                        <form class="filter-offer__form filter__form" action="#">
-                           <label class="filter-offer__label filter__label">
-                              <input class="filter-offer__input filter__input" type="checkbox" name="promo">
-                              <span class="filter-offer__checkbox"></span>
-                              <span class="filter-offer__text">Со скидкой</span>
-                           </label>
-                           <label class="filter-offer__label filter__label">
-                              <input class="filter-offer__input filter__input" type="checkbox" name="new" checked>
-                              <span class="filter-offer__checkbox"></span>
-                              <span class="filter-offer__text">Новинка</span>
-                           </label>
-                           <label class="filter-offer__label filter__label">
-                              <input class="filter-offer__input filter__input" type="checkbox" name="hit">
-                              <span class="filter-offer__checkbox"></span>
-                              <span class="filter-offer__text">Хит</span>
-                           </label>
-                        </form>
-                     </div>
-                  </li>
-                  <li class="catalog__item">
-                     <div class="filter-price">
-                        <h3 class="filter-price__title filter-title">
-                           Цена
-                        </h3>
-                        <form class="filter-price__form filter__form" action="#">
-                           <label class="filter-price__label">
-                              <span class="filter-price__content">
-                                 От<span class="filter-price__from filter-price__price"></span>₽
-                              </span>   
-                              <span class="filter-price__content">
-                                 До<span class="filter-price__to filter-price__price"></span>₽
-                              </span>
-                           </label>
-                           <input class="filter-price__input" data-min="0" data-max="1200" data-from="100" data-to="1000" type="text" name="price-range">
-                        </form>
-                     </div>
-                  </li>
-               </ul>
+               <div class="catalog__inner-wrp">
+                  <span class="sr-only">Кнопка закрытия меню категорий для выбора</span>
+                  <button class="catalog__inner-btn">
+                     <svg class="catalog__inner-btn-svg" width="18" height="18">
+                        <use xlink:href="images/sprite/images.svg#close"></use>
+                     </svg>
+                  </button>
+                  <ul class="catalog__list">
+                     <li class="catalog__item">
+                        <div class="filter-category">
+                           <h3 class="filter-category__title filter-title">
+                              Категории
+                           </h3>
+                        <ul class="filter-category__list">
+                           <li class="filter-category__item">
+                              <a class="filter-category__link" href="#">Бургеры</a>
+                           </li>
+                           <li class="filter-category__item">
+                              <a class="filter-category__link" href="#">Пицца</a>
+                           </li>
+                           <li class="filter-category__item">
+                              <a class="filter-category__link" href="#">Сендвичи</a>
+                           </li>
+                           <li class="filter-category__item">
+                              <a class="filter-category__link filter-category__link--active" href="#">Азиатская кухня</a>
+                           </li>
+                           <li class="filter-category__item">
+                              <a class="filter-category__link" href="#">Сеты</a>
+                           </li>
+                           <li class="filter-category__item">
+                              <a class="filter-category__link" href="#">Европейская кухня</a>
+                           </li>
+                           <li class="filter-category__item">
+                              <a class="filter-category__link" href="#">Напитки</a>
+                           </li>
+                           <li class="filter-category__item">
+                              <a class="filter-category__link" href="#">Алкоголь</a>
+                           </li>
+                        </ul>
+                        </div>
+                     </li>
+                     <li class="catalog__item">
+                        <div class="filter-offer">
+                           <h3 class="filter-offer__title filter-title">
+                              Предложения
+                           </h3>
+                           <form class="filter-offer__form filter__form" action="#">
+                              <label class="filter-offer__label filter__label">
+                                 <input class="filter-offer__input filter__input" type="checkbox" name="promo">
+                                 <span class="filter-offer__checkbox"></span>
+                                 <span class="filter-offer__text">Со скидкой</span>
+                              </label>
+                              <label class="filter-offer__label filter__label">
+                                 <input class="filter-offer__input filter__input" type="checkbox" name="new" checked>
+                                 <span class="filter-offer__checkbox"></span>
+                                 <span class="filter-offer__text">Новинка</span>
+                              </label>
+                              <label class="filter-offer__label filter__label">
+                                 <input class="filter-offer__input filter__input" type="checkbox" name="hit">
+                                 <span class="filter-offer__checkbox"></span>
+                                 <span class="filter-offer__text">Хит</span>
+                              </label>
+                           </form>
+                        </div>
+                     </li>
+                     <li class="catalog__item">
+                        <div class="filter-price">
+                           <h3 class="filter-price__title filter-title">
+                              Цена
+                           </h3>
+                           <form class="filter-price__form filter__form" action="#">
+                              <label class="filter-price__label">
+                                 <span class="filter-price__content">
+                                    От<span class="filter-price__from filter-price__price"></span>₽
+                                 </span>   
+                                 <span class="filter-price__content">
+                                    До<span class="filter-price__to filter-price__price"></span>₽
+                                 </span>
+                              </label>
+                              <input class="filter-price__input" data-min="0" data-max="1200" data-from="100" data-to="1000" type="text" name="price-range">
+                           </form>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
                <div class="catalog-box">
                   <ul class="catalog-box__list">
                      <li class="catalog-box__item">

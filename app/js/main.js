@@ -12,6 +12,16 @@ $(function () {
       $('.body').toggleClass('lock');
    });
 
+   $('.catalog-top__btn').on('click', function(){
+      $('.catalog__inner-wrp').toggleClass('catalog__inner-wrp--active');
+
+   });
+
+   $('.catalog__inner-btn').on('click', function(){
+      $('.catalog__inner-wrp').toggleClass('catalog__inner-wrp--active');
+
+   });
+
    var swiper = new Swiper('.reviews__list', {
 		slidesPerView: 1,
 		spaceBetween: 10,
@@ -29,13 +39,6 @@ $(function () {
 			prevEl: '.swiper-button-prev',
 		}
    });
-
-//    var media = window.matchMedia("(max-width: 576px)");
-//    function mediaAdaptive({
-//       if (media.matches) {
-         
-//       };
-// });
 
    var swiper2 = new Swiper('.restaurant__wrapper', {
       slidesPerView: 1,
