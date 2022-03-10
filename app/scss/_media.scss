@@ -312,13 +312,17 @@
          top: 0;
          bottom: 0;
          left: 0;
+
+         &.catalog__inner-wrp--active{
+            overflow-y: auto;
+         }
          
          &--active{
             transform: translateX(0);
-            height: 110%;
-            width: 85%;
+            top: 0;
+            bottom: 0;
+            width: 87%;
             background-color: $white;
-            // overflow-y: scroll;
             z-index: 35;
          }
       }
@@ -328,7 +332,7 @@
          position: absolute;
          top: 20px;
          right: 20px;
-         display: inline-block;
+         display: block;
          padding: 11px 11px 6px 11px;
 
          &:focus{
@@ -337,7 +341,7 @@
       }
 
       &__list{
-         margin: 80px 0 20px 10px;
+         margin: 80px 0 20px 3px;
          overflow-y: scroll;
       }
    }
