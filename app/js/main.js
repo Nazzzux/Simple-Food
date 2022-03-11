@@ -70,34 +70,35 @@ $(function () {
    });
    
 
-   // var swiper3 = new Swiper('.promo__wrp', {
-   //    slidesPerView: 1,
-   //    spaceBetween: 10,
-   //    loop: true,
-   //    simulateTouch: true,
-   //    speed: 300,
+   var swiper3 = new Swiper('.promo__wrp', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      simulateTouch: true,
+      speed: 300,
 
-   //    breakpoints: {       
+      breakpoints: {       
 
-   //       576: {
-   //          slidesPerView: 1.9,
-   //       },
+         // 576: {
+         //    slidesPerView: 1.9,
+         // },
 
-   //       768: {
-   //          slidesPerView: 2,
-   //       },
+         768: {
+            slidesPerView: 2,
+         },
          
-   //       992: {
-   //          slidesPerView: 3,
-   //          spaceBetween: 30,
-   //       },
-   //    },
+         992: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            loop: false,
+         },
+      },
 
-   //    pagination: {
-	// 		el: ".promo__pagination",
-	// 		clickable: true,
-	// 	},
-   // });
+      pagination: {
+			el: ".promo__pagination",
+			clickable: true,
+		},
+   });
 
    $('.filter-price__input').ionRangeSlider({
       type: 'double',
