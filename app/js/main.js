@@ -27,6 +27,10 @@ $(function () {
 		spaceBetween: 10,
 		loop: true,
       simulateTouch: true,
+      autoplay: {
+         delay: 1500,
+         disableOnInteraction: false,
+      },
 
 		pagination: {
 			el: ".swiper-pagination",
@@ -46,6 +50,10 @@ $(function () {
       loop: true,
       simulateTouch: true,
       speed: 300,
+      autoplay: {
+         delay: 1500,
+         disableOnInteraction: false,
+      },
 
       breakpoints: {       
 
@@ -76,13 +84,12 @@ $(function () {
       loop: true,
       simulateTouch: true,
       speed: 300,
+      autoplay: {
+         delay: 1500,
+         disableOnInteraction: false,
+      },
 
       breakpoints: {       
-
-         // 576: {
-         //    slidesPerView: 1.9,
-         // },
-
          768: {
             slidesPerView: 2,
          },
