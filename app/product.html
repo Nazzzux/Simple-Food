@@ -162,33 +162,51 @@
       </div>
       <section class="product-info section">
          <div class="container">
-            <div class="product-info__slider"></div>
-            <div class="product-info__wrapper">
-               <h2 class="product-info__title title">Чизбургер с листьями салата</h2>
-               <div class="product__info"></div>
-               <div class="product-info__price">160<span class="product-info__currency">руб.</span></div>
-               <form class="product-info__form" action="#">
-                  <label class="product-info__quantity-wrp">
-                     <span class="sr-only">Количество продукта для добавления в заказ</span>
-                     <input class="product-info__quantity" type="number" min="1">
-                  </label>
-                  <button class="product-info__add-btn btn" type="submit">
-                     <svg class="product-info__svg" width="19" height="19"x>
-                        <use xlink:href="images/sprite/images.svg#cart"></use>
-                     </svg>
-                     Добавить в корзину
-                  </button>
-               </form>
-               <h3 class="product-info__about-title filter-title">Доставка и оплата</h3>
-               <ul class="product-info__delivery-list">
-                  <li class="product-info__delivery-item">Минимальная сумма заказа — 160 руб.</li>
-                  <li class="product-info__delivery-item">Время доставки заказа — 80-140 мин.</li>
-                  <li class="product-info__delivery-item">Оплата осуществляется только банковской картой.</li>
-                  <li class="product-info__delivery-item">Окончательная сумма заказа формируется после сбора товаров.</li>                  
-               </ul>
-               <a class="product-info__show-more" href="#">Подробнее</a>  
-            </div>
-      </div>
+            <div class="product-info__inner">
+               <div class="product-info__slider">
+                  <img class="proguct-info__img" src="images/category/burger-1.png" alt="Чизбургер с листьями салата" width="400" height="400">
+               </div>
+               <div class="product-info__about">
+                  <h2 class="product-info__title title">Чизбургер с листьями салата</h2>
+                  <div class="product-info__rating" data-rateyo-rating="4" data-rateyo-read-only="true"></div>
+                  <div class="product-info__price">160<span class="product-info__currency">руб.</span></div>
+                  <form class="product-info__form" action="#">
+                     <div class="product-info__quantity-wrp">
+                        <span class="sr-only">Уменьшить количесво на один</span>
+                        <button class="product-info__btn product-info__btn--minus btn" id="decrement" type="button" onclick="stepper(this)">
+                           <svg class="product-info__btn-svg product-info__btn-svg--minus" width="20" height="2">
+                              <use xlink:href="images/sprite/images.svg#decrement"></use>
+                           </svg>
+                        </button>
+                        <label class="product-info__label">
+                           <span class="sr-only">Количество продукта для добавления в заказ</span>
+                           <input class="product-info__quantity" id="product-info__quantity" type="number" name="quantity" value="1" min="1" max="1000" step="1">
+                           <span class="sr-only">Увеличить количесво на один</span>
+                        </label>
+                        <button class="product-info__btn product-info__btn--plus btn" id="increment" type="button" onclick="stepper(this)">
+                           <svg class="product-info__btn-svg product-info__btn-svg--plus" width="20" height="20">
+                              <use xlink:href="images/sprite/images.svg#increment"></use>
+                           </svg>
+                        </button>
+                     </div>
+                     <button class="product-info__add-btn btn" type="submit">
+                        <svg class="product-info__svg" width="16" height="16">
+                           <use xlink:href="images/sprite/images.svg#cart"></use>
+                        </svg>
+                        Добавить в корзину
+                     </button>
+                  </form>
+                  <h3 class="product-info__about-title filter-title">Доставка и оплата</h3>
+                  <ul class="product-info__delivery-list">
+                     <li class="product-info__delivery-item">Минимальная сумма заказа — 160 руб.</li>
+                     <li class="product-info__delivery-item">Время доставки заказа — 80-140 мин.</li>
+                     <li class="product-info__delivery-item">Оплата осуществляется только банковской картой.</li>
+                     <li class="product-info__delivery-item">Окончательная сумма заказа формируется после сбора товаров.</li>                  
+                  </ul>
+                  <a class="product-info__link-more link-state hero__link-more" href="#">Подробнее</a>  
+               </div>
+            </div>   
+         </div>
       </section>
    </main>
    <footer class="footer">
@@ -311,6 +329,7 @@
          <a class="link-state" href="#">© 2021 Simple Food</a>
       </div>
    </footer>
+   <script src="js/input.js"></script>
    <script src="js/main.min.js"></script>
 </body>
 

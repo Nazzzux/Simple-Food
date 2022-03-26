@@ -76,3 +76,13 @@ select[class] {
    outline: transparent;
    cursor: pointer;
 }
+
+// deleting default arrows for input[type=number]
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button,
+input[type=number] {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+
