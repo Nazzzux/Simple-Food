@@ -25,7 +25,6 @@
 
    .product-info{
       &__slider{
-         margin-right: 15px;
          padding: 65px 85px;
       }
 
@@ -689,5 +688,9 @@
          margin-bottom: 15px;
          padding-right: 120px;
       }
+   }
+
+   .slider-arrow{
+      display: none;
    }
 }

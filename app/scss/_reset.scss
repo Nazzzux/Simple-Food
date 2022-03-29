@@ -72,7 +72,8 @@ address {
 a[class],
 button[class],
 input[class],
-select[class] {
+select[class],
+label[class] {
    outline: transparent;
    cursor: pointer;
 }

@@ -22,9 +22,9 @@ $(function () {
       $('.body').toggleClass('lock');
    });
 
-   $('.product-info__rating').rateYo({
+   $('.product__rating, .comments__rating').rateYo({
       starWidth: '16px',
-      normalFill: 'rgba(193, 193, 193, 0.3)',
+      normalFill: 'rgba(193, 193, 193, 0.7)',
       ratedFill: '#ffb800',
       spacing: '6px',
       halfStar: true,
@@ -127,25 +127,68 @@ $(function () {
       },
    });
 
+   var productSlider = new Swiper('.product__slider', {
+      slidesPerView: 1,
+      spaceBetween: 70,
+      loop: true,
+      simulateTouch: true,
+      speed: 1200,
+      slideClass: 'product__slider-slide',
+      wrapperClass: 'product__slider-wrp',
+      autoplay: {
+         delay: 3000,
+         disableOnInteraction: false,
+      },
+      navigation: {
+         clickable: true,
+         prevEl: '.product__slider-prev',
+         nextEl: '.product__slider-next',
+      }
+   });
+
    var mixer = mixitup('.category__list');
 });
 
-const myInput = document.getElementById('product-info__quantity');
-
-console.log(myInput);
+//product input logic
+const productQuantity = document.getElementById('product__quantity');
 
 function stepper(btn) {
    let id = btn.getAttribute('id');
-   let min = myInput.getAttribute('min');
-   let max = myInput.getAttribute('max');
-   let step = myInput.getAttribute('step');
-   let val = myInput.getAttribute('value');
+   let min = productQuantity.getAttribute('min');
+   let max = productQuantity.getAttribute('max');
+   let step = productQuantity.getAttribute('step');
+   let val = productQuantity.getAttribute('value');
    let calcStep = (id == 'increment') ? (step * 1) : (step * -1);
    let newValue = parseInt(val) + calcStep;
 
    if (newValue >= min && newValue <= max) {
-      myInput.setAttribute('value', newValue);
+      productQuantity.setAttribute('value', newValue);
    };
-
-   console.log(id, newValue);
 };
+
+//product page tabs
+//look through all tabs to get single tab, and for each of the tabs we will add event listener (inside the arrow fucnction) and every time we click on it, it will run the function
+// const tabButtons = document.querySelectorAll('.product-info__btn');
+// const tabItems = document.querySelectorAll('.product-info__content');
+
+tabButtons.forEach(tabButton => {
+   tabButton.addEventListener('click', (event) => {
+      const dataValue = tabButton.dataset.tabsHandler;
+
+      tabItems.forEach(tabItem => {
+         if (tabItem.dataset.tabsField === dataValue) {
+            tabItem.classList.remove('hidden');
+         } else {
+            tabItem.classList.add('hidden');
+         }
+      });
+
+      tabButtons.forEach((btn) => {
+         if (btn === event.target) {
+            btn.classList.add('product-info__btn--active');
+         } else {
+            btn.classList.remove('product-info__btn--active');
+         }
+      });
+   });
+});
