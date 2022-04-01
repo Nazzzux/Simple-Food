@@ -151,9 +151,9 @@ body {
    &__list {
       display: flex;
       justify-content: start;
-      // flex-wrap: nowrap;
+      flex-wrap: nowrap;
       @include font-prop(14px, 1.2);
-      padding: 24px 0;
+      padding: 11px 0;
    }
 
    &__item {
@@ -164,7 +164,8 @@ body {
          background-image: url('../images/icons/arrow-right.svg');
          width: 5px;
          height: 10px;
-         top: 3px;
+         bottom: 50%;
+         transform: translateY(50%);
          right: -10px;
          position: absolute;
       }
@@ -178,6 +179,11 @@ body {
       &:not(:last-child) {
          margin-right: 16px;
       }
+   }
+
+   &__link{
+      display: block;
+      padding: 13px 2px;
    }
 }
 
@@ -279,5 +285,75 @@ body {
 .hidden{
    display: none;
 }
+
+.swiper-arrow {
+   display: block;
+   padding: 5px;
+   width: 44px;
+   height: 44px;
+   border-radius: 50%;
+   fill: $gray;
+   stroke: $gray;
+   overflow: hidden;
+   &:hover {
+         fill: $orange-300;
+         stroke: $orange-300;
+   }
+
+   &:focus {
+         outline: 3px solid $orange-900;
+         outline-offset: -4px;
+   }
+
+   &:active {
+         outline: transparent;
+         stroke: $orange-900;
+   }
+}
+
+// swiper pagination
+// review section swiper classes
+// переделать stepper через addEventListener 
+
+// .swiper-pagination {
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+//    height: 100%;
+//    padding: 0 56px;
+
+//    &-bullets {
+//       margin: 0 0;
+//    }
+
+//    &-bullet {
+//       width: 15px;
+//       height: 15px;
+//       display: block;
+
+//       &:not(:last-child) {
+//          margin-right: 15px;
+//       }
+
+//       &:hover {
+//          outline: 2px solid $orange-600;
+//          background-color: $orange-300;
+//       }
+
+//       &:focus {
+//          background-color: initial;
+//          outline: 2px solid $orange-900;
+//       }
+
+//       &:active {
+//          background-color: $orange-600;
+//          outline: transparent;
+//       }
+//    }
+
+//    &-bullet-active {
+//       background-color: $orange-900;
+//    }
+// }
 
 

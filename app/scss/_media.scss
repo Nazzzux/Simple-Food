@@ -23,7 +23,7 @@
       margin-bottom: 30px;
    }
 
-   .product-info{
+   .product{
       &__slider{
          padding: 65px 85px;
       }
@@ -192,7 +192,11 @@
 
    // Product Page
 
-   .product-info{
+   .container-small{
+      max-width: 570px;
+   }
+
+   .product{
       &__inner{
          flex-wrap: wrap;
          justify-content: center;
@@ -204,6 +208,12 @@
       &__quantity-wrp{
          margin-bottom: 0;
          padding-right: 0;  
+      }
+   }
+
+   .product-offer{
+      &__title{
+         text-align: center;
       }
    }
 }
@@ -365,8 +375,6 @@
       &__logo{
          padding: 5px 5px 5px 1px;
       }
-
-
    }
 
    .address{
@@ -471,8 +479,8 @@
 
    // Product page
 
-   .product-info{
-      padding: 30px 0;
+   .product{
+      padding: 30px 0 25px;
       &__slider{
          padding: 40px 40px; 
       }
@@ -498,6 +506,117 @@
       &__link-more{
          padding: 10px 0;
          display: block;
+      }
+   }
+
+   .product-info{
+      padding-bottom: 45px;
+
+      &__tabs{
+         justify-content: center;
+      }
+
+      &__item{
+         &:not(:last-child){
+            margin-right: 30px;
+         }
+      }
+
+      &__btn{
+         font-size: 20px;
+      }
+   }
+
+   .descr{
+      &__list{
+         font-size: 16px;
+      }
+   }
+
+   .attributes{
+      &__item{
+         font-size: 16px;
+         
+         &:not(:last-child){
+            margin-bottom: 15px;
+         }
+      }
+   }
+
+   .comments{
+      &__title{
+         font-size: 20px;
+      }
+
+      &__box{
+         padding-bottom: 45px;
+      }
+
+      &__item {
+         padding-bottom: 15px;
+         &:not(:first-child){
+            padding-top: 15px;
+         }
+      }
+
+      &__name{
+         font-size: 20px;
+         margin: 0 0 8px 0;
+      }
+
+      &__text{
+         font-size: 16px;
+      }
+
+      &__label{
+         font-size: 20px;
+
+         &--textarea{
+            max-width: 100%;  
+            margin-bottom: 20px;
+         }
+
+         &--check{
+            font-size: 18px;
+         }
+
+         &--name{
+            margin-bottom: 20px;
+         }
+      }
+
+      &__form-wrp{
+         min-width: 100%;
+      }
+
+      &__textarea,
+      &__input{
+         padding-bottom: 15px;
+      }
+
+      &__form-btn{
+         font-size: 18px;
+      }
+   }
+
+   .product-offer{
+      &__title{
+         margin-bottom: 30px;
+         font-size: 20px;
+      }
+
+      &__wrapper{
+         margin-bottom: 30px;
+         padding: 2px;
+      }
+
+      &__btn{
+         display: none;
+      }
+
+      &__pagination{
+         display: flex;
+         justify-content: center;
       }
    }
 }
@@ -674,9 +793,13 @@
 
    // Product page
 
-   .product-info{
+   .product{
       &__slider{
          padding: 20px;
+      }
+
+      &__slider-btn{
+         display: none;
       }
 
       &__img{
@@ -690,7 +813,37 @@
       }
    }
 
+   .product-info{
+      &__tabs{
+         justify-content: flex-start;
+      }
+   }
+
    .slider-arrow{
       display: none;
    }
+
+   .comments{
+      &__top{
+         margin-bottom: 15px;
+         padding-bottom: 30px;
+         position: relative;
+      }
+
+      &__rating{
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         padding: 0;
+      }
+   }
+
+   .product-offer{
+      &__title{
+         text-align-last: left;
+      }
+   }
+
 }
+
+

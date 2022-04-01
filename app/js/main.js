@@ -42,7 +42,7 @@ $(function () {
       },
 
       pagination: {
-         el: ".swiper-pagination",
+         el: '.swiper-pagination',
          clickable: true,
       },
 
@@ -81,7 +81,7 @@ $(function () {
       },
 
       pagination: {
-         el: ".restaurant__pagination",
+         el: '.restaurant__pagination',
          clickable: true,
       },
    });
@@ -110,7 +110,7 @@ $(function () {
       },
 
       pagination: {
-         el: ".promo__pagination",
+         el: '.promo__pagination',
          clickable: true,
       },
    });
@@ -141,11 +141,10 @@ $(function () {
       },
       navigation: {
          clickable: true,
-         prevEl: '.product__slider-prev',
-         nextEl: '.product__slider-next',
+         prevEl: '.product__slider-btn--prev',
+         nextEl: '.product__slider-btn--next',
       }
    });
-
    var mixer = mixitup('.category__list');
 });
 
@@ -168,8 +167,8 @@ function stepper(btn) {
 
 //product page tabs
 //look through all tabs to get single tab, and for each of the tabs we will add event listener (inside the arrow fucnction) and every time we click on it, it will run the function
-// const tabButtons = document.querySelectorAll('.product-info__btn');
-// const tabItems = document.querySelectorAll('.product-info__content');
+const tabButtons = document.querySelectorAll('.product-info__btn');
+const tabItems = document.querySelectorAll('.product-info__content');
 
 tabButtons.forEach(tabButton => {
    tabButton.addEventListener('click', (event) => {
@@ -191,4 +190,47 @@ tabButtons.forEach(tabButton => {
          }
       });
    });
+});
+
+var productOffer = new Swiper('.product-offer__slider', {
+   slidesPerView: 2,
+   spaceBetween: 5,
+   loop: true,
+   simulateTouch: true,
+   speed: 1800,
+   slideClass: 'product-offer__slide',
+   wrapperClass: 'product-offer__wrapper',
+   loopedSlides: 0;
+   breakpoints: {
+      576: {
+         slidesPerView: 3,
+      },
+
+      768: {
+         spaceBetween: 15,
+         slidesPerView: 4,
+      },
+
+      992: {
+         spaceBetween: 30,
+      },
+
+      1200: {
+         slidesPerView: 5,
+      },
+   },
+
+   autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+   },
+   navigation: {
+      clickable: true,
+      prevEl: '.product-offer__btn--prev',
+      nextEl: '.product-offer__btn--next',
+   },
+   pagination: {
+      el: '.product-offer__pagination',
+      clickable: true,
+   },
 });
