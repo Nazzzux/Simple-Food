@@ -6,7 +6,7 @@
    width: 100%;
    
    &:hover {
-          box-shadow: 0px 3px 15px rgba($orange-600, 0.5);
+         box-shadow: 0px 3px 15px rgba($orange-600, 0.5);
       }
       
       &__img {
@@ -24,7 +24,7 @@
       }
 
    &__content {
-         padding: 0 20px 20px;
+         padding: 0 20px 26px;
          display: flex;
          justify-content: space-between;
          align-items: center;
@@ -41,15 +41,12 @@
 
    &__btn {
       align-content: center;
-      padding: 5px 27px;
+      padding: 6px 27px 1px;
       border-radius: 20px;
       transition: all 0.2s;
-      line-height: 1;
-      width: 24px;
-      height: 24px;
 
       &:hover {
-            padding: 5px 7px 5px 48px;
+            padding: 6px 7px 1px 48px;
       }
    }
 }

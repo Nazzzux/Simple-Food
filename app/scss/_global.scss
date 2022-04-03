@@ -311,6 +311,40 @@ body {
    }
 }
 
+.swiper-dots {
+   .swiper-pagination-bullets {
+      margin: 0 0;
+   }
+
+   .swiper-pagination-bullet {
+      width: 15px;
+      height: 15px;
+
+      &:not(:last-child) {
+         margin-right: 15px;
+      }
+
+      &:hover {
+         outline: 2px solid $orange-600;
+         background-color: $orange-300;
+      }
+
+      &:focus {
+         background-color: initial;
+         outline: 2px solid $orange-900;
+      }
+
+      &:active {
+         background-color: $orange-600;
+         outline: transparent;
+      }
+   }
+
+   .swiper-pagination-bullet-active {
+      background-color: $orange-900;
+   }
+}
+
 // swiper pagination
 // review section swiper classes
 // переделать stepper через addEventListener 
