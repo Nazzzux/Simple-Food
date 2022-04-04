@@ -124,7 +124,7 @@ exports.watching = watching;
 exports.images = images;
 // exports.nunjucks = nunjucks;
 exports.cleanDist = cleanDist;
-exports.build = series(cleanDist, images, build);
+exports.build = series(cleanDist, images, svgStore, build);
 exports.default = parallel(styles, scripts, browsersync, svgStore, watching);
 
 // nunjucks, - parallel b4 styles

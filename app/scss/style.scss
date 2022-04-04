@@ -233,17 +233,9 @@
       display: flex;
       align-items: center;
       margin-bottom: 9px;
-      overflow-x: scroll; 
+      overflow-x: auto; 
       white-space: nowrap;
       padding: 1px 1px 11px;
-
-      /* Hide scrollbar for IE, Edge and Firefox */
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: none; /* Firefox */
-      /* Hide scrollbar for Chrome, Safari and Opera */
-      &::-webkit-scrollbar {
-         display: none;
-      }
    }
    // .product-info__item
    &__item {
@@ -535,7 +527,7 @@
             background-color: $orange-900;
          }
       }
-}
+      }
 
 
 

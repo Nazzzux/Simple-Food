@@ -7,18 +7,6 @@
       }
    }
 
-   .restaurant{
-      &__list{
-         justify-content: space-evenly;
-      }
-
-      // &__item{
-      //    &:not(:nth-child(3n+3)){
-      //       margin-right: 0;
-      //    }
-      // }
-   }
-
    .app{
       &__text{
          max-width: 50%;
@@ -34,8 +22,6 @@
    .address{
       margin-bottom: 30px;
    }
-
-   // product page
 
    .product{
       &__slider{
@@ -107,6 +93,17 @@
       &__content{
          max-width: 70%;
       }
+   }
+
+   .restaurant{
+      &__list{
+         // grid-gap: 15px;
+         // grid-template-columns: repeat(2, 1fr);
+      }
+   }
+
+   .restaurant-card{
+      margin: 0 auto;
    }
 
    .reviews{
@@ -185,6 +182,12 @@
          background-color: $orange-900;
       }
 
+      .swiper-slide-duplicate,
+      .swiper-slide-duplicate-active,
+      .swiper-slide-duplicate-next,
+      .swiper-slide-duplicate-prevtive{
+         display: none;
+      }
    }
 
    // Product Page
@@ -323,22 +326,6 @@
    .restaurant{
       &__title{
          margin-bottom: 20px;
-      }
-
-      &__list{
-         flex-wrap: nowrap;
-      }
-
-      &__item{
-         margin: 0;
-      }
-
-      &__pagination{
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         height: 100%;
-         padding: 3px 0;
       }
    }
 
@@ -480,6 +467,13 @@
       &__title{
          text-align: center;
          margin-bottom: 30px;
+      }
+
+      .swiper-slide-duplicate,
+      .swiper-slide-duplicate-active,
+      .swiper-slide-duplicate-next,
+      .swiper-slide-duplicate-prevtive{
+         display: block;
       }
    }
 

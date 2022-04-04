@@ -11,7 +11,7 @@
 </head>
 
 <body class="body">
-<!--
+
    <header class="header">
       <div class="container">
          <nav class="menu">
@@ -20,12 +20,12 @@
             </a>
             <ul class="menu__list">
                <li class="menu__item">
-                  <a class="menu__link menu__link--active link-state" href="#">
+                  <a class="menu__link menu__link--active link-state" href="index.html">
                      Главная
                   </a>
                </li>
                <li class="menu__item">
-                  <a class="menu__link link-state" href="#">
+                  <a class="menu__link link-state" href="catalog.html">
                      Блюда
                   </a>
                </li>
@@ -59,6 +59,7 @@
                <span class="menu__button-span"></span>
             </button>
             <div class="menu__mobile">
+               <div class="overlay"></div>
                <div class="menu__mobile-top">
                   <a class="logo" href="#">
                      <img class="logo__img" src="images/navigation/logo.svg" alt="Логотип" width="200" height="39">
@@ -71,12 +72,12 @@
                </div>
                <ul class="menu__list--mobile">
                   <li class="menu__item--mobile">
-                     <a class="menu__link--mobile menu__link--active link-state" href="#">
+                     <a class="menu__link--mobile menu__link--active link-state" href="index.html">
                         Главная
                      </a>
                   </li>
                   <li class="menu__item--mobile">
-                     <a class="menu__link--mobile link-state" href="#">
+                     <a class="menu__link--mobile link-state" href="catalog.html">
                         Блюда
                      </a>
                   </li>
@@ -326,7 +327,7 @@
                   </article>
                </li>
             </ul>
-            <a class="category__show-more link-state" href="#">Показать еще</a>
+            <a class="category__show-more link-state" href="catalog.html">Показать еще</a>
          </div>
       </section>
       <section class="offer section">
@@ -361,13 +362,12 @@
                </div>
             </div>
       </section>
-   -->
       <section class="restaurant section">
          <div class="container">
             <h2 class="restaurant__title title">Лучшие рестораны</h2>
-            <div class="restaurant__wrapper" data-adaptive="false">
-               <div class="restaurant__list">
-                  <div class="restaurant__item">
+            <div class="restaurant__wrapper swiper">
+               <div class="restaurant__list swiper-wrapper">
+                  <div class="restaurant__item swiper-slide">
                      <article class="restaurant-card">
                         <img class="restaurant-card__img" src="images/restaurant/1.jpg" alt="Blaze Pizza" width="370"
                            height="300">
@@ -388,7 +388,7 @@
                         </div>
                      </article>
                   </div>
-                  <div class="restaurant__item">
+                  <div class="restaurant__item swiper-slide">
                      <article class="restaurant-card">
                         <img class="restaurant-card__img" src="images/restaurant/2.jpg" alt="Pizza Runcho" width="370"
                            height="300">
@@ -409,7 +409,7 @@
                         </div>
                      </article>
                   </div>
-                  <div class="restaurant__item">
+                  <div class="restaurant__item swiper-slide">
                      <article class="restaurant-card">
                         <img class="restaurant-card__img" src="images/restaurant/3.jpg" alt="Pizza Hut" width="370"
                            height="300">
@@ -430,7 +430,7 @@
                         </div>
                      </article>
                   </div>
-                  <div class="restaurant__item">
+                  <div class="restaurant__item swiper-slide">
                      <article class="restaurant-card">
                         <img class="restaurant-card__img" src="images/restaurant/4.jpg" alt="McDonald`s" width="370"
                            height="300">
@@ -451,7 +451,7 @@
                         </div>
                      </article>
                   </div>
-                  <div class="restaurant__item">
+                  <div class="restaurant__item swiper-slide">
                      <article class="restaurant-card">
                         <img class="restaurant-card__img" src="images/restaurant/5.jpg" alt="KFC" width="370" height="300">
                         <h3 class="restaurant-card__title">KFC</h3>
@@ -471,7 +471,7 @@
                         </div>
                      </article>
                   </div>
-                  <div class="restaurant__item">
+                  <div class="restaurant__item swiper-slide">
                      <article class="restaurant-card">
                         <img class="restaurant-card__img" src="images/restaurant/6.jpg" alt="Star Burgers" width="370"
                            height="300">
@@ -493,12 +493,10 @@
                      </article>
                   </div>
                </div>
-               <div class="restaurant__pagination swiper-dots"></div>
+               <div class="restaurant__pagination"></div>
             </div>
          </div>
       </section>
-<!--
-   
       <section class="reviews section">
          <div class="container">
             <h2 class="reviews__title title">Отзывы клиентов</h2>
@@ -729,7 +727,6 @@
          <a class="link-state" href="#">© 2021 Simple Food</a>
       </div>
    </footer>
--->
    <script src="js/main.min.js"></script>
 </body>
 
